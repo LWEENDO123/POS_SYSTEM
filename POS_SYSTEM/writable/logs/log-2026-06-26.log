@@ -1,0 +1,100 @@
+CRITICAL - 2026-06-26 07:39:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "products.php"
+[Method: GET, Route: products]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('products.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('products', [], true)
+ 3 APPPATH\Controllers\ProductController.php(17): view('products', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ProductController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-26 07:40:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "products.php"
+[Method: GET, Route: products]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('products.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('products', [], true)
+ 3 APPPATH\Controllers\ProductController.php(17): view('products', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ProductController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-26 17:03:43 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: products]
+in SYSTEMPATH\Database\BaseConnection.php on line 1123.
+ 1 SYSTEMPATH\Model.php(603): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(753): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH\CodeIgniter.php(945): CodeIgniter\Model->__call('initController', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-26 17:17:32 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: products]
+in SYSTEMPATH\Database\BaseConnection.php on line 1123.
+ 1 SYSTEMPATH\Model.php(603): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(753): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH\CodeIgniter.php(945): CodeIgniter\Model->__call('initController', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-26 17:32:00 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: products]
+in SYSTEMPATH\Database\BaseConnection.php on line 1123.
+ 1 SYSTEMPATH\Model.php(603): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(753): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH\CodeIgniter.php(945): CodeIgniter\Model->__call('initController', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-26 17:32:09 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: products]
+in SYSTEMPATH\Database\BaseConnection.php on line 1123.
+ 1 SYSTEMPATH\Model.php(603): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(753): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH\CodeIgniter.php(945): CodeIgniter\Model->__call('initController', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-26 22:03:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "product2/index.php"
+[Method: GET, Route: product2]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('product2/index.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('product2/index', [], true)
+ 3 APPPATH\Controllers\product2.php(15): view('product2/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Product2->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product2))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-26 22:18:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "product2/index.php"
+[Method: GET, Route: product2]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('product2/index.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('product2/index', [], true)
+ 3 APPPATH\Controllers\product2.php(15): view('product2/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Product2->product2()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product2))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
