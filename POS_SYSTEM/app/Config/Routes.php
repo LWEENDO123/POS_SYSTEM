@@ -1,27 +1,20 @@
 <?php
 
+use App\Controllers\CreateAccount;
 use App\Controllers\Product2;
+use App\Controllers\Products;
 use CodeIgniter\Router\RouteCollection;
 
 /** @var RouteCollection $routes */
 $routes->get('/', 'Home::index');
 
-$routes->get('/products', 'Productpage::index');
-$routes->get('/products/allproducts', 'Productpage::allproducts'); 
-$routes->get('/products/oneproduct', 'Productpage::oneproduct'); 
-$routes->get('/products/search/(:any)', 'Productpage::search/$1'); 
-$routes->get('/products/lowstock', 'Productpage::lowstock');
+// --- Account creation ---
+$routes->get('create-account', 'CreateAccount::user_page');          // show form
+$routes->post('create-account', 'CreateAccount::user_registration'); // handle form submission
 
+// --- Login ---
+$routes->get('userlogin', 'AuthController::loginpage');   // show login form
+$routes->post('userlogin', 'AuthController::userlogin');
+$routes->get('DashBoard/index', 'DashBoard::index'); // prevent 404 after login
 
-$routes->get('/product2', 'Product2::product2');
-
-$routes->get('/hello', 'hellocontroller::index');
-
-$routes->get('/studentregister', 'Studentregister::index'); 
-$routes->post('/studentregister', 'Studentregister::register'); 
-
-$routes->get('/studentlogin', 'Studentregister::loginForm'); 
-$routes->post('/studentlogin', 'Studentregister::login'); 
-//$routes->get('/homepage', 'Studentregister::homepage');
-//$routes->get('/homepage', 'Studentregister::homeview');
-//$routes->get('/homepage', 'Studentregister::showoneuser');
+$routes->get('Productcontroller','Productcontroller::producthome');
