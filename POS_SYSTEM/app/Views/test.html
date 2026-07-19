@@ -3,33 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>New Sale — Tillkeep POS</title>
+    <style>
+        :root {
+            --primary: #0A5741;
+            --accent: #8B5CF6;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9f7;
+            color: #1f2937;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .app-shell {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 220px;
+            background: #0A5741;
+            color: white;
+            padding: 20px 0;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar li {
+            padding: 14px 24px;
+            cursor: pointer;
+        }
+        .sidebar li.active {
+            background: rgba(255,255,255,0.15);
+        }
+
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .topbar {
+            background: white;
+            padding: 15px 25px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            overflow: auto;
+        }
+
+        .pos-layout {
+            display: flex;
+            gap: 24px;
+            height: 100%;
+        }
+
+        /* Catalog */
+        .catalog {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .search-form input {
+            width: 100%;
+            padding: 14px 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+        .category-scroller {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .category-scroller a {
+            padding: 8px 18px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #333;
+            background: white;
+        }
+        .category-scroller a.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+            gap: 16px;
+        }
+        .product-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+            transition: 0.2s;
+        }
+        .product-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .product-name { font-weight: bold; margin: 10px 0 5px; }
+        .product-price { color: var(--primary); font-weight: bold; }
+
+        /* Receipt */
+        .receipt-tape {
+            width: 380px;
+            background: white;
+            border: 2px solid #1f2937;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+        }
+        .receipt-head {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px dashed #ccc;
+        }
+        .receipt-lines {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #fafafa;
+        }
+        .receipt-line {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .receipt-totals {
+            padding: 20px;
+            border-top: 2px dashed #ccc;
+        }
+        .totals-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+        }
+        .grand-total {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .btn {
+            padding: 14px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            width: 100%;
+        }
+        .btn-danger {
+            background: #ef4444;
+            color: white;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <header>
 
-    </header>
+<div class="app-shell">
 
-    <main>
-        <nav>
-            <a href="<?=site_url('DashBoard/products')">
-            Products
-            </a>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li>Dashboard</li>
+            <li class="active">New Sale</li>
+            <li>Sales</li>
+            <li>Products</li>
+            <li>Customers</li>
+            <li>Cashiers</li>
+        </ul>
+    </div>
 
-            <a href="<?=site_url('DashBoard/products')">
-            Products
-            </a>
+    <!-- Main Content -->
+    <div class="main">
+        <div class="topbar">
+            <h1>New Sale</h1>
+            <div><strong>Mwansa Tembo</strong></div>
+        </div>
 
-            <a href="<?=site_url('DashBoard/products')">
-            Products
-            </a>
-        </nav>
+        <div class="content">
+            <div class="pos-layout">
 
+                <!-- LEFT: Catalog -->
+                <div class="catalog">
 
-    </main>
+                    <!-- Search -->
+                    <form method="GET" class="search-form">
+                        <input type="text" name="search" placeholder="Search products or scan barcode..." 
+                               value="<?= esc($search ?? '') ?>">
+                    </form>
 
-    <footer>
+                    <!-- Categories -->
+                    <div class="category-scroller">
+                        <a href="<?= site_url('pos/new') ?>" class="<?= empty($category) ? 'active' : '' ?>">All</a>
+                        <a href="<?= site_url('pos/new?category=beverage') ?>" class="<?= ($category ?? '') === 'beverage' ? 'active' : '' ?>">Beverage</a>
+                        <a href="<?= site_url('pos/new?category=snacks') ?>" class="<?= ($category ?? '') === 'snacks' ? 'active' : '' ?>">Snacks</a>
+                        <a href="<?= site_url('pos/new?category=bakery') ?>" class="<?= ($category ?? '') === 'bakery' ? 'active' : '' ?>">Bakery</a>
+                        <a href="<?= site_url('pos/new?category=personal') ?>" class="<?= ($category ?? '') === 'personal' ? 'active' : '' ?>">Personal Care</a>
+                    </div>
 
-    </footer>
+                    <!-- Product Grid -->
+                    <div class="product-grid">
+                        <?php if (!empty($products)): ?>
+                            <?php foreach ($products as $product): ?>
+                                <div class="product-card">
+                                    <form method="POST" action="<?= site_url('pos/add_to_cart') ?>">
+                                        <?= csrf_field() ?>
+                                        <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
+                                        <div style="height:110px; background:#f3f4f6; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:3rem;">
+                                            📦
+                                        </div>
+                                        <div class="product-name"><?= esc($product['name']) ?></div>
+                                        <div><?= esc($product['category']) ?></div>
+                                        <div class="product-price">K<?= number_format($product['price'], 2) ?></div>
+                                        <button type="submit" class="btn btn-primary" style="margin-top:10px; width:100%; padding:8px;">
+                                            Add to Sale
+                                        </button>
+                                    </form>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p>No products found.</p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Receipt -->
+                <div class="receipt-tape">
+                    <div class="receipt-head">
+                        <div><strong>Tillkeep · Sale #<?= esc($sale_number ?? 'NEW') ?></strong></div>
+                        <div><?= date('M d, g:i A') ?> — Mwansa Tembo</div>
+                        
+                        <div style="margin-top:15px; padding:10px; background:#f8fafc; border-radius:8px;">
+                            Walk-in Customer
+                            <a href="#" style="float:right; font-size:0.9rem;">Change</a>
+                        </div>
+                    </div>
+
+                    <div class="receipt-lines">
+                        <?php if (!empty($cart)): ?>
+                            <?php foreach ($cart as $index => $item): ?>
+                                <div class="receipt-line">
+                                    <div>
+                                        <strong><?= esc($item['name']) ?></strong><br>
+                                        <small>K<?= number_format($item['price'], 2) ?> × <?= $item['qty'] ?></small>
+                                    </div>
+                                    <div style="text-align:right;">
+                                        K<?= number_format($item['price'] * $item['qty'], 2) ?><br>
+                                        <form method="POST" action="<?= site_url('pos/remove_from_cart') ?>" style="display:inline;">
+                                            <?= csrf_field() ?>
+                                            <input type="hidden" name="index" value="<?= $index ?>">
+                                            <button type="submit" style="color:red; background:none; border:none; font-size:0.85rem; cursor:pointer;">
+                                                Remove
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p style="text-align:center; color:#888; margin-top:50px;">No items yet</p>
+                        <?php endif; ?>
+                    </div>
+
+                    <div class="receipt-totals">
+                        <div class="totals-row">
+                            <span>Items</span>
+                            <span><?= $total_items ?? 0 ?></span>
+                        </div>
+                        <div class="totals-row grand-total">
+                            <span>Total</span>
+                            <span>K<?= number_format($total_amount ?? 0, 2) ?></span>
+                        </div>
+                    </div>
+
+                    <div style="padding:15px 20px; border-top:1px solid #ddd;">
+                        <form method="POST" action="<?= site_url('pos/checkout') ?>">
+                            <?= csrf_field() ?>
+                            <button type="submit" class="btn btn-primary" <?= empty($cart) ? 'disabled' : '' ?>>
+                                Charge Customer
+                            </button>
+                        </form>
+
+                        <form method="POST" action="<?= site_url('pos/clear_cart') ?>" style="margin-top:10px;">
+                            <?= csrf_field() ?>
+                            <button type="submit" class="btn btn-danger">Clear Sale</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

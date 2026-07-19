@@ -12,6 +12,7 @@ class CategoryModel extends Model
 
     protected $allowedFields = [
         'category_name',
-        'description'
+        'created_at',
+        'created_by_user_id'
     ];
 }

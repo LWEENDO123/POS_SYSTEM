@@ -1,0 +1,148 @@
+DEBUG - 2026-07-18 22:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 22:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 22:56:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-18 22:56:40 --> Table 'pos_system.sale_item' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `sale`.`sale_id`, `sale`.`sale_date`, `sale`.`total_amount`, `sale`.`status`, `customer`.`firstname`, `customer`.`lastname`, `user`.`username`, COUNT(sale_item.sale_item_id) AS items_count
+FROM `sale`
+LEFT JOIN `customer` ON `customer`.`customer_id` = `sale`.`customer_id`
+JOIN `user` ON `user`.`user_id` = `sale`.`user_id`
+JOIN `sale_item` ON `sale_item`.`sale_id` = `sale`.`sale_id`
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sale`.`sale_id`, `sale`.`sale_date`, `sale`.`total_amount`, `sale`.`status`, `customer`.`firstname`, `customer`.`lastname`, `user`.`username`, COUNT(sale_item.sale_item_id) AS items_count
+FROM `sale`
+LEFT JOIN `customer` ON `customer`.`customer_id` = `sale`.`customer_id`
+JOIN `user` ON `user`.`user_id` = `sale`.`user_id`
+JOIN `sale_item` ON `sale_item`.`sale_id` = `sale`.`sale_id`
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sale`.`sale_id`, `sale`.`sale_date`, `sale`.`total_amount`, `sale`.`status`, `customer`.`firstname`, `customer`.`lastname`, `user`.`username`, COUNT(sale_item.sale_item_id) AS items_count
+FROM `sale`
+LEFT JOIN `customer` ON `customer`.`customer_id` = `sale`.`customer_id`
+JOIN `user` ON `user`.`user_id` = `sale`.`user_id`
+JOIN `sale_item` ON `sale_item`.`sale_id` = `sale`.`sale_id`
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `sale`.`sale_id`, `sale`.`sale_date`, `sale`.`total_amount`, `sale`.`status`, `customer`.`firstname`, `customer`.`lastname`, `user`.`username`, COUNT(sale_item.sale_item_id) AS items_count
+FROM `sale`
+LEFT JOIN `customer` ON `customer`.`customer_id` = `sale`.`customer_id`
+JOIN `user` ON `user`.`user_id` = `sale`.`user_id`
+JOIN `sale_item` ON `sale_item`.`sale_id` = `sale`.`sale_id`
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 10', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\DashBoard.php(68): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-18 22:56:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'pos_system.sale_item' doesn't exist
+[Method: GET, Route: DashBoard/index]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `sale`.`sale_id`, `sale`.`sale_date`, `sale`.`total_amount`, `sale`.`status`, `customer`.`firstname`, `customer`.`lastname`, `user`.`username`, COUNT(sale_item.sale_item_id) AS items_count
+FROM `sale`
+LEFT JOIN `customer` ON `customer`.`customer_id` = `sale`.`customer_id`
+JOIN `user` ON `user`.`user_id` = `sale`.`user_id`
+JOIN `sale_item` ON `sale_item`.`sale_id` = `sale`.`sale_id`
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 10', [], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\DashBoard.php(68): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-18 22:56:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'pos_system.sale_item' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sale`.`sale_id`, `sale`.`sale_date`, `sale`.`total_amount`, `sale`.`status`, `customer`.`firstname`, `customer`.`lastname`, `user`.`username`, COUNT(sale_item.sale_item_id) AS items_count
+FROM `sale`
+LEFT JOIN `customer` ON `customer`.`customer_id` = `sale`.`customer_id`
+JOIN `user` ON `user`.`user_id` = `sale`.`user_id`
+JOIN `sale_item` ON `sale_item`.`sale_id` = `sale`.`sale_id`
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sale`.`sale_id`, `sale`.`sale_date`, `sale`.`total_amount`, `sale`.`status`, `customer`.`firstname`, `customer`.`lastname`, `user`.`username`, COUNT(sale_item.sale_item_id) AS items_count
+FROM `sale`
+LEFT JOIN `customer` ON `customer`.`customer_id` = `sale`.`customer_id`
+JOIN `user` ON `user`.`user_id` = `sale`.`user_id`
+JOIN `sale_item` ON `sale_item`.`sale_id` = `sale`.`sale_id`
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `sale`.`sale_id`, `sale`.`sale_date`, `sale`.`total_amount`, `sale`.`status`, `customer`.`firstname`, `customer`.`lastname`, `user`.`username`, COUNT(sale_item.sale_item_id) AS items_count
+FROM `sale`
+LEFT JOIN `customer` ON `customer`.`customer_id` = `sale`.`customer_id`
+JOIN `user` ON `user`.`user_id` = `sale`.`user_id`
+JOIN `sale_item` ON `sale_item`.`sale_id` = `sale`.`sale_id`
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 10', [], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\DashBoard.php(68): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-18 22:56:40 --> [Caused by] mysqli_sql_exception: Table 'pos_system.sale_item' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `sale`.`sale_id`, `sale`.`sale_date`, `sale`.`total_amount`, `sale`.`status`, `customer`.`firstname`, `customer`.`lastname`, `user`.`username`, COUNT(sale_item.sale_item_id) AS items_count
+FROM `sale`
+LEFT JOIN `customer` ON `customer`.`customer_id` = `sale`.`customer_id`
+JOIN `user` ON `user`.`user_id` = `sale`.`user_id`
+JOIN `sale_item` ON `sale_item`.`sale_id` = `sale`.`sale_id`
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sale`.`sale_id`, `sale`.`sale_date`, `sale`.`total_amount`, `sale`.`status`, `customer`.`firstname`, `customer`.`lastname`, `user`.`username`, COUNT(sale_item.sale_item_id) AS items_count
+FROM `sale`
+LEFT JOIN `customer` ON `customer`.`customer_id` = `sale`.`customer_id`
+JOIN `user` ON `user`.`user_id` = `sale`.`user_id`
+JOIN `sale_item` ON `sale_item`.`sale_id` = `sale`.`sale_id`
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sale`.`sale_id`, `sale`.`sale_date`, `sale`.`total_amount`, `sale`.`status`, `customer`.`firstname`, `customer`.`lastname`, `user`.`username`, COUNT(sale_item.sale_item_id) AS items_count
+FROM `sale`
+LEFT JOIN `customer` ON `customer`.`customer_id` = `sale`.`customer_id`
+JOIN `user` ON `user`.`user_id` = `sale`.`user_id`
+JOIN `sale_item` ON `sale_item`.`sale_id` = `sale`.`sale_id`
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `sale`.`sale_id`, `sale`.`sale_date`, `sale`.`total_amount`, `sale`.`status`, `customer`.`firstname`, `customer`.`lastname`, `user`.`username`, COUNT(sale_item.sale_item_id) AS items_count
+FROM `sale`
+LEFT JOIN `customer` ON `customer`.`customer_id` = `sale`.`customer_id`
+JOIN `user` ON `user`.`user_id` = `sale`.`user_id`
+JOIN `sale_item` ON `sale_item`.`sale_id` = `sale`.`sale_id`
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 10', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\DashBoard.php(68): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')

@@ -15,6 +15,9 @@ class SaleItemModel extends Model
         'product_id',
         'quantity',
         'unit_price',
-        'subtotal'
+        'subtotal',
+        'Date',
+        'created_by_user_id'
+
     ];
 }

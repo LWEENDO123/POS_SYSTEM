@@ -11,11 +11,10 @@ class CustomerModel extends Model
     protected $primaryKey = 'customer_id';
 
     protected $allowedFields = [
-        'first_name',
-        'last_name',
+        'firstname',
         'phone',
         'email',
-        'address'
+        
     ];
 
     public function searchCustomer($keyword)

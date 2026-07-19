@@ -16,5 +16,5 @@ $routes->post('create-account', 'CreateAccount::user_registration'); // handle f
 $routes->get('userlogin', 'AuthController::loginpage');   // show login form
 $routes->post('userlogin', 'AuthController::userlogin');
 $routes->get('DashBoard/index', 'DashBoard::index'); // prevent 404 after login
+$routes->get('productcontroller', 'Productcontroller::search');
 
-$routes->get('Productcontroller','Productcontroller::producthome');

@@ -1,0 +1,340 @@
+DEBUG - 2026-07-06 12:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 12:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 12:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 13:08:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 13:08:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 13:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 13:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-06 13:08:54 --> ParseError: syntax error, unexpected double-quoted string ">", expecting "," or ";"
+[Method: GET, Route: DashBoard/index]
+in APPPATH\Views\Dashboard\index.php on line 21.
+ 1 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('DashBoard/index', [], true)
+ 3 APPPATH\Controllers\DashBoard.php(36): view('DashBoard/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-06 13:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-06 13:24:45 --> ErrorException: Undefined variable $totalproducts
+[Method: GET, Route: DashBoard/index]
+in APPPATH\Views\Dashboard\index.php on line 41.
+ 1 APPPATH\Views\Dashboard\index.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalproducts', 'C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php', 41)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('DashBoard/index', [], true)
+ 5 APPPATH\Controllers\DashBoard.php(36): view('DashBoard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-06 13:31:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-06 13:31:52 --> ErrorException: Undefined variable $totalproducts
+[Method: GET, Route: DashBoard/index]
+in APPPATH\Views\Dashboard\index.php on line 50.
+ 1 APPPATH\Views\Dashboard\index.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalproducts', 'C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php', 50)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('DashBoard/index', [], true)
+ 5 APPPATH\Controllers\DashBoard.php(36): view('DashBoard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-06 14:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-06 14:28:07 --> Error: Class "App\Models\SaleModel" not found
+[Method: GET, Route: DashBoard/index]
+in APPPATH\Controllers\DashBoard.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-06 14:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-06 14:29:30 --> Error: Class "App\Models\SaleModel" not found
+[Method: GET, Route: DashBoard/index]
+in APPPATH\Controllers\DashBoard.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-06 14:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-06 14:30:09 --> Unknown column 'totalamount' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT SUM(`totalamount`) AS `totalamount`
+FROM `sale`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`totalamount`) AS `totalamount`
+FROM `sale`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`totalamount`) AS `totalamount`
+FROM `sale`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`totalamount`) AS `totalamount`
+FROM `sale`', [], false)
+ 5 SYSTEMPATH\Model.php(761): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\DashBoard.php(47): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-06 14:30:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'totalamount' in 'field list'
+[Method: GET, Route: DashBoard/index]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`totalamount`) AS `totalamount`
+FROM `sale`', [], false)
+ 2 SYSTEMPATH\Model.php(761): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\DashBoard.php(47): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-06 14:30:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'totalamount' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`totalamount`) AS `totalamount`
+FROM `sale`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`totalamount`) AS `totalamount`
+FROM `sale`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`totalamount`) AS `totalamount`
+FROM `sale`', [], false)
+ 4 SYSTEMPATH\Model.php(761): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\DashBoard.php(47): CodeIgniter\Model->__call('get', [])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-06 14:30:09 --> [Caused by] mysqli_sql_exception: Unknown column 'totalamount' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT SUM(`totalamount`) AS `totalamount`
+FROM `sale`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`totalamount`) AS `totalamount`
+FROM `sale`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`totalamount`) AS `totalamount`
+FROM `sale`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`totalamount`) AS `totalamount`
+FROM `sale`', [], false)
+ 5 SYSTEMPATH\Model.php(761): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\DashBoard.php(47): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-06 14:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 15:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 15:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 16:48:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 16:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 16:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 16:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 16:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 16:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-06 16:49:54 --> ErrorException: Undefined variable $usersearch
+[Method: GET, Route: DashBoard/index]
+in APPPATH\Views\Dashboard\index.php on line 68.
+ 1 APPPATH\Views\Dashboard\index.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usersearch', 'C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php', 68)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('DashBoard/index', [], true)
+ 5 APPPATH\Controllers\DashBoard.php(52): view('DashBoard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-06 16:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-06 16:50:55 --> ErrorException: Undefined variable $usersearch
+[Method: GET, Route: DashBoard/index]
+in APPPATH\Views\Dashboard\index.php on line 68.
+ 1 APPPATH\Views\Dashboard\index.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usersearch', 'C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php', 68)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('DashBoard/index', [], true)
+ 5 APPPATH\Controllers\DashBoard.php(52): view('DashBoard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-06 16:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-06 16:50:57 --> ErrorException: Undefined variable $usersearch
+[Method: GET, Route: DashBoard/index]
+in APPPATH\Views\Dashboard\index.php on line 68.
+ 1 APPPATH\Views\Dashboard\index.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usersearch', 'C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php', 68)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('DashBoard/index', [], true)
+ 5 APPPATH\Controllers\DashBoard.php(52): view('DashBoard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-06 16:53:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 17:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 17:06:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-06 17:06:51 --> TypeError: CodeIgniter\Database\BaseBuilder::like(): Argument #2 ($match) must be of type string, null given, called in C:\laragon\www\POS_SYSTEM\system\Model.php on line 761
+[Method: GET, Route: productcontroller]
+in SYSTEMPATH\Database\BaseBuilder.php on line 1006.
+ 1 SYSTEMPATH\Model.php(761): CodeIgniter\Database\BaseBuilder->like('name', null)
+ 2 APPPATH\Controllers\productcontroller.php(14): CodeIgniter\Model->__call('like', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Productcontroller->search()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productcontroller))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-06 17:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-06 17:33:18 --> ErrorException: Undefined variable $totalproducts
+[Method: GET, Route: productcontroller]
+in APPPATH\Views\Dashboard\index.php on line 50.
+ 1 APPPATH\Views\Dashboard\index.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalproducts', 'C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php', 50)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('DashBoard/index', [], true)
+ 5 APPPATH\Controllers\productcontroller.php(22): view('DashBoard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Productcontroller->search()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-06 18:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 18:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 18:28:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 18:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 18:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 18:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 18:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 18:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 18:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 18:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 18:48:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 18:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 18:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 18:48:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 18:48:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 18:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 18:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 18:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 21:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-06 21:53:55 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\POS_SYSTEM\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\POS_SYSTEM\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\POS_SYSTEM\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\POS_SYSTEM\app\Controllers\AuthController.php(32): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(974): App\Controllers\AuthController->userlogin()
+#8 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\POS_SYSTEM\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\POS_SYSTEM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\POS_SYSTEM\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\POS_SYSTEM\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\POS_SYSTEM\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\POS_SYSTEM\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\POS_SYSTEM\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\POS_SYSTEM\app\Controllers\AuthController.php(32): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(974): App\Controllers\AuthController->userlogin()
+#7 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\POS_SYSTEM\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\POS_SYSTEM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\POS_SYSTEM\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\POS_SYSTEM\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2026-07-06 21:53:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: userlogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(32): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->userlogin()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-06 21:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 21:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 21:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 21:55:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 21:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-06 21:55:27 --> ErrorException: Undefined variable $totalproducts
+[Method: GET, Route: productcontroller]
+in APPPATH\Views\Dashboard\index.php on line 47.
+ 1 APPPATH\Views\Dashboard\index.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalproducts', 'C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php', 47)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('DashBoard/index', [], true)
+ 5 APPPATH\Controllers\productcontroller.php(22): view('DashBoard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Productcontroller->search()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-06 22:01:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-06 22:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-06 22:01:33 --> ErrorException: Undefined variable $totalcustomers
+[Method: GET, Route: productcontroller]
+in APPPATH\Views\Dashboard\index.php on line 53.
+ 1 APPPATH\Views\Dashboard\index.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalcustomers', 'C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php', 53)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('DashBoard/index', [], true)
+ 5 APPPATH\Controllers\productcontroller.php(22): view('DashBoard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Productcontroller->search()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')

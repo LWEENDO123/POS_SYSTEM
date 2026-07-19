@@ -11,7 +11,7 @@ class ProductModel extends Model
     protected $primaryKey = 'product_id';
 
     protected $allowedFields = [
-        'name',
+        'product_name',
         'barcode',
         'price',
         'stock_quantity',

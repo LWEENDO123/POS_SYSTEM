@@ -12,7 +12,8 @@ class AuthController extends BaseController{
 
     public function userlogin(){
 
-        $username=$this->request->getPost('username');
+        $username=trim($this->request->getPost('username'));
+        $username=preg_replace('/\s+/','',$username);
         $password=$this->request->getPost('password');
 
         $rules=[
@@ -43,15 +44,18 @@ class AuthController extends BaseController{
            
 
             );
+
+
             $role=session()->get('role');
 
             if($role=='cashier'){
             return redirect()->to('DashBoard/index')->with('success', "Welcome ".$user['username']);
             }
-            //return view('dashboard/index');
+            //return view('dashboard/index')
+            //return ;
         } 
         else {
-         return redirect()->to('userlogin')->with('message', 'Invalid credentials');}
+            return redirect()->to('userlogin')->with('message', 'Invalid credentials');}
 
 
 
