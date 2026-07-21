@@ -97,6 +97,10 @@
             <label for="email">Email</label>
             <input type="email" id="email" name="email"  value="<?=esc('email')?>" >
 
+            
+            <label>phone</label>
+            <input type="text" name="phone"  value="<?=esc('phone')?>" >
+
             <label for="password">Password</label>
             <input type="password" id="password" name="password"value="<?=esc('password')?>" >
             <?php

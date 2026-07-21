@@ -20,6 +20,7 @@ class CreateAccount extends BaseController{
             'lastname'=>'required',
             'password'=>'required',
             'email'=>'required|valid_email',
+            'phone'=>'required'
             
         ];
         
@@ -35,6 +36,7 @@ class CreateAccount extends BaseController{
 
         // Create a simple username from first+last (remove spaces)
         $username = strtolower(str_replace(' ', '', $firstname.$lastname));
+        $phone = $this->request->getPost('phone');
         
         
 
@@ -54,18 +56,19 @@ class CreateAccount extends BaseController{
                          ->withInput()
                          ->with('message2',$email.'already exists');
         }
-        $user_id = 'USR'.random_int(100000000000,999999999999);
+        //$user_id = 'USR'.random_int(100000000000,999999999999);
 
 
         $model->insert([
-            'user_id'=>$user_id,
+            
             
             'firstname'=>$firstname,
             'lastname'=>$lastname,
             
             'username'=>$username,
             'password'=>$password,
-            'email'=>$email
+            'email'=>$email,
+            'phone'=>$phone
         ]);
         
         return redirect()->to('userlogin')->with("success","user Account created");

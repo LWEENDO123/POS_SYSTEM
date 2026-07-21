@@ -216,12 +216,16 @@
 
                     <!-- Categories -->
                     <div class="category-scroller">
-                        <a href="<?= site_url('pos/new') ?>" class="<?= empty($category) ? 'active' : '' ?>">All</a>
-                        <a href="<?= site_url('pos/new?category=beverage') ?>" class="<?= ($category ?? '') === 'beverage' ? 'active' : '' ?>">Beverage</a>
-                        <a href="<?= site_url('pos/new?category=snacks') ?>" class="<?= ($category ?? '') === 'snacks' ? 'active' : '' ?>">Snacks</a>
-                        <a href="<?= site_url('pos/new?category=bakery') ?>" class="<?= ($category ?? '') === 'bakery' ? 'active' : '' ?>">Bakery</a>
-                        <a href="<?= site_url('pos/new?category=personal') ?>" class="<?= ($category ?? '') === 'personal' ? 'active' : '' ?>">Personal Care</a>
-                    </div>
+    <a href="<?= site_url('pos/new') ?>" class="<?= empty($category) ? 'active' : '' ?>">All</a>
+    <?php foreach ($categories as $cat): ?>
+        <a href="<?= site_url('pos/new?category=' . strtolower($cat['category_name'])) ?>"
+           class="<?= ($category ?? '') === strtolower($cat['category_name']) ? 'active' : '' ?>">
+           <?= esc($cat['category_name']) ?>
+        </a>
+    <?php endforeach; ?>
+</div>
+
+                    
 
                     <!-- Product Grid -->
                     <div class="product-grid">

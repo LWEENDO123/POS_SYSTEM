@@ -11,6 +11,7 @@ class SaleModel extends Model
     protected $primaryKey = 'sale_id';
 
     protected $allowedFields = [
+        
         'customer_id',
         'user_id',
         'sale_date',

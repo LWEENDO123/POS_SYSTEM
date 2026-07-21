@@ -111,7 +111,7 @@
       <nav>
         <ul>
           <li onclick="location.href='<?= site_url('DashBoard/index') ?>'">Dashboard</li>
-          <li onclick="location.href='<?= site_url('sales/new') ?>'">New Sale</li>
+          <li onclick="location.href='<?= base_url('DashBoard/sales') ?>'">New Sale</li>
           <li onclick="location.href='<?= site_url('sales') ?>'">Sales</li>
           <li onclick="location.href='<?= site_url('products') ?>'">Products</li>
           <li onclick="location.href='<?= site_url('customers') ?>'">Customers</li>
