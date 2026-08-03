@@ -85,14 +85,7 @@
             <label for="lastname">Lastname</label>
             <input type="text" id="lastname" name="lastname" value="<?=esc('lastname')?>" >
 
-            <?php
-            if(session()->getflashdata('message2')):
             
-            ?>
-            <div style="color: red;">
-                <?=session()->getflashdata('message2')?>
-            </div>
-            <?php endif;?>
 
             <label for="email">Email</label>
             <input type="email" id="email" name="email"  value="<?=esc('email')?>" >
@@ -103,11 +96,23 @@
 
             <label for="password">Password</label>
             <input type="password" id="password" name="password"value="<?=esc('password')?>" >
+            
+
+            <?php
+            if(session()->getflashdata('error')):
+            
+            ?>
+            <div style="color: red;">
+                <?=session()->getflashdata('error')?>
+            </div>
+            <?php endif;?>
+
+            
             <?php
             if(session()->getflashdata('success')):
             
             ?>
-            <div style="color: red;">
+            <div style="color: green;">
                 <?=session()->getflashdata('success')?>
             </div>
             <?php endif;?>

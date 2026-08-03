@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>POS — Dynamic Cart (keeps original design)</title>
+  <style>
+    /* --- keep your original styles, trimmed and adjusted where needed --- */
+    body{ background-color:#93A099; margin:0; padding:0; font-family: sans-serif; }
+    .container{
+      display: grid;
+      grid-template-columns: 200px 1fr 300px;
+      grid-template-rows: 60px 1fr 40px;
+      grid-template-areas:
+        "header header header"
+        "sidebar main receit"
+        "footer footer footer";
+      gap: 10px;
+      min-height:100vh;
+      box-sizing:border-box;
+      padding:10px;
+    }
+    header{ grid-area:header; display:flex; align-items:flex-end; padding-left:14%; background:whitesmoke; }
+    .links{ display:flex; gap:20px; padding-bottom:10px; flex-wrap:wrap; }
+    .links a{
+      border:1px solid #3d3d3d; border-radius:10px; font-size:12px; padding:3px 12px; text-decoration:none; background:white; color:#5c5e5d;
+    }
+
+    aside{ grid-area:sidebar; background:white; border-radius:10px; box-shadow:2px 2px 2px rgba(0,0,0,0.2); padding:12px; box-sizing:border-box; }
+    .nav{ display:flex; flex-direction:column; gap:10px; align-items:center; background:#0A5741; padding-top:20px; height:100%; border-radius:8px; }
+    .nav a{ text-decoration:none; color:white; width:90%; text-align:center; padding:10px; border-radius:20px; background:#0A5741; box-shadow:2px 2px 2px rgba(0,0,0,0.15); }
+
+    main{ grid-area:main; background:whitesmoke; border-radius:10px; padding:12px; box-sizing:border-box; overflow:auto; }
+    .tablecontainer{ display:grid; grid-template-columns: repeat(4, 150px); gap:20px; padding-top:10px; overflow-y:auto; }
+
+    .box{
+      border-radius:20px; background:#e2e6e4; box-shadow:2px 2px 2px #0A5741; min-height:120px; padding:10px; display:flex; flex-direction:column; gap:8px;
+    }
+    .image{ width:130px; height:80px; background:whitesmoke; border-radius:12px; border:1px solid #fff; }
+    .stock{ margin-left:auto; border-radius:20px; padding:3px 8px; background:rgb(233,45,45); color:white; display:inline-block; }
+    .stock1{ margin-left:auto; border-radius:20px; padding:3px 8px; background:rgb(16,139,4); color:white; display:inline-block; }
+    .add-to-cart{ border-radius:10px; margin-top:6px; background:#0A5741; color:white; padding:8px; border:none; cursor:pointer; }
+
+    .receit{ grid-area:receit; display:flex; flex-direction:column; align-items:center; background:#0A5741; color:white; border-radius:10px; padding:12px; box-sizing:border-box; min-height:100vh; }
+    .TILL{ width:100%; }
+    .TILL h4{ margin:6px 0; }
+
+    /* --- Cart: single table to avoid layout break --- */
+    .tablecontainer1{
+      width:100%;
+      background:whitesmoke;
+      border-radius:10px;
+      padding:10px;
+      box-sizing:border-box;
+      color:#222;
+      overflow:auto;
+    }
+    #cart-table{ width:100%; border-collapse:collapse; }
+    #cart-table thead th{ text-align:left; padding:8px; color:#0A5741; font-weight:700; }
+    #cart-table td{ padding:8px; border-bottom:1px solid #e6e7ea; font-size:13px; vertical-align:middle; }
+    .cart-actions button{ margin:0 4px; padding:4px 8px; border-radius:6px; border:none; cursor:pointer; background:#0A5741; color:white; }
+    .cart-actions button.remove{ background:#d9534f; }
+    #cart-total{ text-align:right; font-weight:700; margin-top:8px; }
+
+    footer{ grid-area:footer; text-align:center; color:#fff; padding:8px; }
+
+    @media (max-width:900px){
+      .container{ grid-template-columns:1fr; grid-template-areas:"header" "main" "receit" "sidebar" "footer"; }
+      .tablecontainer{ grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="links">
+        <a href="#"> All</a>
+        <a href="#"> Beverages</a>
+        <a href="#"> Snacks</a>
+        <a href="#"> Household</a>
+        <a href="#"> Bakery</a>
+        <a href="#"> Personal Care</a>
+      </div>
+    </header>
+
+    <aside>
+      <div class="nav">
+        <a href="#">Dashboard</a>
+        <a href="#">New Sale</a>
+        <a href="#">Sales</a>
+        <a href="#">Products</a>
+        <a href="#">Cashier</a>
+      </div>
+    </aside>
+
+    <main>
+      <!-- search area (keeps simple) -->
+      <div style="display:flex; gap:8px; margin-bottom:12px;">
+        <form id="search-form" style="flex:1; display:flex; gap:8px;">
+          <input id="search-input" type="text" name="search" placeholder="Search products..." style="flex:1; padding:8px; border-radius:8px; border:1px solid #e6e7ea;">
+          <button type="submit" style="padding:8px 12px; border-radius:8px; border:none; background:#0A5741; color:white;">Search</button>
+        </form>
+      </div>
+
+      <!-- product grid (rendered from server or static examples) -->
+      <div class="tablecontainer" id="product-grid">
+        <!-- Example product cards; in production render these from server-side loop -->
+        <?php
+        foreach
+         >
+        <div class="box" data-name="CocaCola" data-category="Beverage" data-price="18.00" data-stock="15">
+          <div class="image"></div>
+          <div style="color:#0A5741;"><b>Beverage</b></div>
+          <div style="color:#616060;">CocaCola</div>
+          <div style="color:#363636;">K18.00</div>
+          <div class="stock">15 left</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="box" data-name="Bread" data-category="Bakery" data-price="12.00" data-stock="30">
+          <div class="image"></div>
+          <div style="color:#0A5741;"><b>Bakery</b></div>
+          <div style="color:#616060;">Bread</div>
+          <div style="color:#363636;">K12.00</div>
+          <div class="stock1">30 left</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="box" data-name="Chips" data-category="Snacks" data-price="8.00" data-stock="100">
+          <div class="image"></div>
+          <div style="color:#0A5741;"><b>Snacks</b></div>
+          <div style="color:#616060;">Chips</div>
+          <div style="color:#363636;">K8.00</div>
+          <div class="stock1">100 left</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- add more cards as needed -->
+      </div>
+    </main>
+
+    <div class="receit">
+      <div class="TILL">
+        <h4>TILL KEEP NEW SALE</h4>
+        <h4 id="today">19 January 2026</h4>
+        <div>
+          Change customer
+          <select id="customer-select" style="margin-left:8px; padding:4px; border-radius:6px;">
+            <option value="">change customer</option>
+            <option>Jane</option>
+            <option>jack</option>
+            <option>joseph</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- single cart table (dynamic) -->
+      <div class="tablecontainer1">
+        <table id="cart-table" aria-live="polite">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Product</th>
+              <th>Price</th>
+              <th style="width:110px">Qty</th>
+              <th style="width:90px">Action</th>
+            </tr>
+          </thead>
+          <tbody id="cart-body">
+            <!-- rows injected by JS -->
+          </tbody>
+        </table>
+
+        <div id="cart-total">Total: K0.00</div>
+      </div>
+
+      <div style="display:flex; gap:8px; margin-top:8px;">
+        <button id="clear-cart" class="button" style="background:#d9534f; color:white; padding:8px; border-radius:8px; border:none;">Clear</button>
+        <button id="checkout" class="button" style="background:#108b04; color:white; padding:8px; border-radius:8px; border:none;">Checkout</button>
+      </div>
+    </div>
+
+    <footer>Hello</footer>
+  </div>
+
+  <script>
+    // Minimal, robust cart logic — keeps your layout intact
+    const CART_KEY = 'pos_cart_v1';
+    let cart = JSON.parse(sessionStorage.getItem(CART_KEY) || '[]');
+
+    function fmt(n){ return Number(n).toFixed(2); }
+
+    function renderCart(){
+      const tbody = document.getElementById('cart-body');
+      tbody.innerHTML = '';
+      let total = 0;
+
+      if(cart.length === 0){
+        const tr = document.createElement('tr');
+        tr.innerHTML = '<td colspan="5" style="text-align:center; color:#666;">Cart is empty</td>';
+        tbody.appendChild(tr);
+      } else {
+        cart.forEach((item, idx) => {
+          total += item.price * item.qty;
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>${escapeHtml(item.category)}</td>
+            <td>${escapeHtml(item.name)}</td>
+            <td>K${fmt(item.price)}</td>
+            <td>
+              <div style="display:flex; align-items:center; gap:6px;">
+                <button data-idx="${idx}" class="qty-btn" data-delta="1">+</button>
+                <span>${item.qty}</span>
+                <button data-idx="${idx}" class="qty-btn" data-delta="-1">-</button>
+              </div>
+            </td>
+            <td class="cart-actions">
+              <button data-idx="${idx}" class="remove">Remove</button>
+            </td>
+          `;
+          tbody.appendChild(tr);
+        });
+      }
+
+      document.getElementById('cart-total').innerText = 'Total: K' + fmt(total);
+      sessionStorage.setItem(CART_KEY, JSON.stringify(cart));
+      attachCartListeners();
+    }
+
+    function addToCart(product){
+      const existing = cart.find(p => p.name === product.name);
+      if(existing) existing.qty++;
+      else cart.push({...product, qty:1});
+      renderCart();
+    }
+
+    function changeQty(index, delta){
+      if(!cart[index]) return;
+      cart[index].qty += delta;
+      if(cart[index].qty <= 0) cart.splice(index,1);
+      renderCart();
+    }
+
+    function removeItem(index){
+      cart.splice(index,1);
+      renderCart();
+    }
+
+    function attachCartListeners(){
+      document.querySelectorAll('#cart-body .qty-btn').forEach(btn => {
+        btn.onclick = () => {
+          const idx = Number(btn.dataset.idx);
+          const delta = Number(btn.dataset.delta);
+          changeQty(idx, delta);
+        };
+      });
+      document.querySelectorAll('#cart-body .remove').forEach(btn => {
+        btn.onclick = () => removeItem(Number(btn.dataset.idx));
+      });
+    }
+
+    function escapeHtml(s){
+      return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+    }
+
+    // Wire product cards
+    document.querySelectorAll('.box').forEach(card => {
+      const btn = card.querySelector('.add-to-cart');
+      btn.addEventListener('click', () => {
+        const product = {
+          name: card.dataset.name,
+          category: card.dataset.category,
+          price: parseFloat(card.dataset.price),
+          stock: parseInt(card.dataset.stock || '0', 10)
+        };
+        addToCart(product);
+      });
+    });
+
+    // Clear and checkout
+    document.getElementById('clear-cart').addEventListener('click', () => { cart = []; renderCart(); });
+    document.getElementById('checkout').addEventListener('click', () => {
+      if(cart.length === 0){ alert('Cart is empty'); return; }
+      // placeholder: send cart to backend here
+      alert('Checkout: ' + cart.length + ' item(s). Total ' + document.getElementById('cart-total').innerText);
+      cart = []; renderCart();
+    });
+
+    // Search (client-side filter)
+    document.getElementById('search-form').addEventListener('submit', e => {
+      e.preventDefault();
+      const q = document.getElementById('search-input').value.trim().toLowerCase();
+      document.querySelectorAll('#product-grid .box').forEach(box => {
+        const name = box.dataset.name.toLowerCase();
+        const cat = box.dataset.category.toLowerCase();
+        box.style.display = (name.includes(q) || cat.includes(q) || q === '') ? '' : 'none';
+      });
+    });
+
+    // Init
+    document.getElementById('today').innerText = new Date().toLocaleDateString(undefined, { day:'numeric', month:'long', year:'numeric' });
+    renderCart();
+  </script>
+</body>
+</html>

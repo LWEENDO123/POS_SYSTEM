@@ -71,6 +71,20 @@
         .container button:hover {
             background-color: #ddd;    /* hover effect */
         }
+        .alert_success{
+            background-color: white;
+            color: #0F6E51;
+            padding: 3px;
+            text-align: center;
+
+
+        }
+        .alert_danger{
+            background-color: white;
+            color: #fd0202;
+            padding: 3px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -88,13 +102,13 @@
         <!-- Subtext -->
         <p class="ptag">Sign in with your cashier account to open the till.</p>
         <?php if (session()->getFlashdata('success')): ?>
-            <div style="color: red;">
+            <div class="alert_success">
                 <?= esc(session()->getFlashdata('success')) ?>
             </div>
             <?php endif; ?>
 
         <?php if (session()->getFlashdata('message')): ?>
-        <div style="color: red;">
+        <div class="alert_danger">
             <?= esc(session()->getFlashdata('message')) ?>
         </div>
         <?php endif; ?>

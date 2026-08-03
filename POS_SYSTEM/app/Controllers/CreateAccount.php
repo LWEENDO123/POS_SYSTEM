@@ -24,16 +24,12 @@ class CreateAccount extends BaseController{
             
         ];
         
-        if(!$this->validate($rules)){
-            return view('useraccountpage',[
-            'validate'=>$this->validator]);
-        }
-        $firstname=trim($this->request->getpost('firstname',FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+        
 
+        $firstname=ucfirst(trim($this->request->getpost('firstname',FILTER_SANITIZE_FULL_SPECIAL_CHARS)));
+        
         $lastname=trim($this->request->getpost('lastname',FILTER_SANITIZE_FULL_SPECIAL_CHARS));
-        $firstname = preg_replace('/\s+/', ' ', $firstname);
-        $lastname  = preg_replace('/\s+/', ' ', $lastname);
-
+        
         // Create a simple username from first+last (remove spaces)
         $username = strtolower(str_replace(' ', '', $firstname.$lastname));
         $phone = $this->request->getPost('phone');
@@ -47,6 +43,11 @@ class CreateAccount extends BaseController{
         $email=$this->request->getpost('email',FILTER_SANITIZE_EMAIL);
 
 
+        if(!$this->validate($rules)){
+            return view('useraccountpage',[
+            'validate'=>$this->validator]);
+        }
+
 
         $model=new  UserModel();
         
@@ -54,12 +55,13 @@ class CreateAccount extends BaseController{
 
         return redirect()->back()
                          ->withInput()
-                         ->with('message2',$email.'already exists');
+                         //message
+                         ->with('error',$email.'already exists');
         }
-        //$user_id = 'USR'.random_int(100000000000,999999999999);
+       
 
 
-        $model->insert([
+        if($model->insert([
             
             
             'firstname'=>$firstname,
@@ -69,16 +71,20 @@ class CreateAccount extends BaseController{
             'password'=>$password,
             'email'=>$email,
             'phone'=>$phone
-        ]);
+        ])){
+         return redirect()->to('userlogin')->with("success","user Account created");
         
-        return redirect()->to('userlogin')->with("success","user Account created");
+        }
+        else{
+            return redirect()->back()->with('error','failed to submit form')->withInput(); 
+
+        }
+        
         
         
     }
     
-    public function todayssales(){
         
-    }    
 
 
 }

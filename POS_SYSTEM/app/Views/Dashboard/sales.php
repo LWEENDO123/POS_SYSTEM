@@ -1,194 +1,476 @@
-<?php
-/** @var array $category */
-/** @var array $products */
-/** @var array $cart */
-/** @var float $total_amount */
-/** @var int $total_items */
-/** @var string $search */
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Sale — Tillkeep POS</title>
-    <style>
-        * { box-sizing: border-box; }
-        html, body { margin:0; padding:0; height:100%; overflow:hidden; font-family:Arial,sans-serif; background:#f8f9f7; color:#1f2937; }
-        .app-shell { display:flex; height:100vh; }
-        .sidebar { width:220px; min-width:220px; background:#0A5741; color:white; padding:20px 0; }
-        .sidebar ul { list-style:none; padding:0; margin:0; }
-        .sidebar li { padding:14px 24px; cursor:pointer; }
-        .sidebar li.active { background:rgba(255,255,255,0.15); }
-        .main { flex:1; display:flex; flex-direction:column; min-width:0; }
-        .topbar { background:white; padding:15px 25px; border-bottom:1px solid #ddd; display:flex; justify-content:space-between; align-items:center; flex-shrink:0; }
-        .content { flex:1; padding:20px; overflow-y:auto; }
-        .pos-layout { display:flex; gap:24px; align-items:flex-start; height:100%; }
-        .catalog { flex:1; display:flex; flex-direction:column; gap:16px; min-width:0; }
-        .search-form { display:flex; gap:8px; }
-        .search-form input { flex:1; padding:14px 20px; border:1px solid #ccc; border-radius:10px; font-size:1rem; }
-        .search-form button { padding:14px 24px; border:none; border-radius:10px; background:#0A5741; color:white; font-weight:bold; cursor:pointer; flex-shrink:0; }
-        .category-scroller { display:flex; gap:10px; flex-wrap:wrap; }
-        .category-scroller a { padding:8px 18px; border:1px solid #ccc; border-radius:30px; text-decoration:none; color:#333; background:white; }
-        .category-scroller a.active { background:#0A5741; color:white; }
-        .product-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(165px,1fr)); gap:16px; }
-        .product-card { background:white; border:1px solid #ddd; border-radius:10px; padding:12px; text-align:center; }
-        .product-card:hover { border-color:#0A5741; box-shadow:0 5px 15px rgba(0,0,0,0.1); }
-        .product-name { font-weight:bold; margin:10px 0 5px; }
-        .product-price { color:#0A5741; font-weight:bold; }
-        .receipt-tape { width:380px; min-width:380px; background:white; border:2px solid #1f2937; border-radius:8px; display:flex; flex-direction:column; max-height:calc(100vh - 140px); position:sticky; top:0; }
-        .receipt-head { padding:20px; text-align:center; border-bottom:2px dashed #ccc; flex-shrink:0; }
-        .receipt-lines { flex:1; padding:20px; overflow-y:auto; background:#fafafa; min-height:150px; }
-        .receipt-line { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid #eee; }
-        .receipt-totals { padding:20px; border-top:2px dashed #ccc; flex-shrink:0; }
-        .totals-row { display:flex; justify-content:space-between; margin:8px 0; }
-        .grand-total { font-size:1.4rem; font-weight:bold; color:#0A5741; }
-        .btn { padding:14px 20px; border:none; border-radius:30px; cursor:pointer; font-weight:bold; }
-        .btn-primary { background:#0A5741; color:white; width:100%; }
-        .btn-danger { background:#ef4444; color:white; width:100%; }
-        .flash-msg { background:#d4edda; color:#155724; padding:12px 20px; border-radius:8px; margin-bottom:12px; }
-        .flash-msg.error { background:#f8d7da; color:#721c24; }
-        .receipt-empty { text-align:center; color:#888; margin-top:50px; }
-        .receipt-actions { padding:15px 20px; border-top:1px solid #ddd; flex-shrink:0; }
-        .receipt-actions form + form { margin-top:10px; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sale History — Modernized</title>
+  <style>
+    /* Layout root */
+    .Main {
+      display: flex;
+      background-color: white;
+      min-height: 100vh;
+    }
+
+    /* Left sidebar container */
+    .box1 {
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    /* Right main column */
+    .box2 {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 24px;
+      flex: 1;
+      box-sizing: border-box;
+    }
+
+    /* Sidebar panel */
+    #box1 {
+      width: 200px;
+      background-color: #0A5741;
+      color: #ffffff;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* Main content wrapper */
+    #box2 {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-bottom: 40px;
+      box-sizing: border-box;
+    }
+
+    /* Sidebar links */
+    .nav a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 6px;
+      border-radius: 8px;
+      line-height: 1.2;
+      transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+    }
+
+    .nav a:hover {
+      background-color: #f3eded;
+      color: #000000;
+      transform: scale(1.02);
+    }
+
+    /* Top filter / tabs */
+    .nav2 {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .topnavbar {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      justify-content: flex-start;
+      padding-left: 8px;
+      box-sizing: border-box;
+    }
+
+    .topnavbar nav a {
+      display: inline-block;
+      text-decoration: none;
+      color: #000000;
+      background-color: #e6e7ea;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      border-radius: 20px;
+      border: 1px solid transparent;
+      box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+      transition: background-color 160ms ease, color 160ms ease;
+    }
+
+    .topnavbar nav a:hover {
+      background-color: #0A5741;
+      color: #ffffff;
+    }
+
+    /* Search area */
+    #search {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      width: 60%;
+      max-width: 720px;
+      margin-left: 10%;
+      padding: 8px;
+      border-radius: 20px;
+      border: 1px solid #e6e7ea;
+      background: #ffffff;
+      box-sizing: border-box;
+    }
+
+    #search button {
+      background-color: #0A5741;
+      color: #ffffff;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      border-radius: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Sales table container */
+    .saletables {
+      border-radius: 16px;
+      margin-left: 30px;
+      padding: 12px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.08);
+      background-color: #e6e7ea;
+      overflow-y: auto;
+      max-width: calc(100% - 1px);
+      box-sizing: border-box;
+      
+    }
+
+    /* Table styling */
+    .saletables table {
+      width: 100%;
+      border-collapse: collapse;
+      box-sizing: border-box;
+    }
+    .saletables table h4{
+        border: 1px solid;
+        border-radius: 20px;
+        background-color: #d7d9dd;
+        color: #0A5741;
+    }
+    .h4{
+        color: red;
+        background-color: white;
+    }
+
+    .saletables table th,
+    .saletables table td {
+      padding: 8px;
+      font-family: serif;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    .saletables table td {
+      text-align: center;
+      border: 1px solid #d7d9dd;
+    }
+
+    .saletables table tr {
+      background: #ffffff;
+    }
+
+    .saletables table th {
+      color: #ffffff;
+      background-color: #0A5741;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 1px solid #0A5741;
+    }
+
+    .calendar-wrapper{
+      
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+    }
+    .calender{
+      line-height: 30px;
+      font-family: sans-serif;
+      
+    }
+    
+    .months{
+      
+      display: grid;
+      grid-template-columns: repeat(7,3fr);
+      gap: 10px;
+      padding-top:20px ;
+      
+      
+      
+    }
+    
+    
+    .months button{
+      border: 1px solid #0A5741;
+      border-radius: 2px;
+      padding: 1px;
+      text-align: center;
+      box-shadow: 1px 1px 1px 1px rgb(126, 125, 125);
+      
+      
+    }
+    .months button:hover{
+      background-color: #0A5741;
+      color: white;
+
+    }
+    .submit{
+      
+      margin-top: 30px;
+      border-radius: 10px;
+      background-color: #0A5741;
+      color: whitesmoke;
+      height: 30px;
+      box-shadow: 1px 1px 1px 1px rgb(126, 125, 125);
+      border: 1px solid;
+      font-family: sans-serif;
+    }
+    .submit:hover{
+      
+      background-color: white;
+      color: #000000;
+      transition: (7);
+
+
+    }
+    .months label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  padding: 1px;
+  font-size: 14px;
+}
+
+
+   
+
+
+    /* Small responsive tweaks */
+    @media (max-width: 900px) {
+      #box1 {
+        width: 180px;
+      }
+
+      .month {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 6px;
+      }
+
+      .saletables {
+        margin-left: 12px;
+        max-width: calc(100% - 220px);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .Main {
+        flex-direction: column;
+      }
+
+      #box1 {
+        width: 100%;
+      }
+
+      #box2 {
+        padding: 12px;
+      }
+
+      
+
+      .months {
+        width: 140px;
+        height: 36px;
+      }
+
+      #search {
+        width: 90%;
+        margin-left: 5%;
+      }
+    }
+    
+  </style>
 </head>
 <body>
-<div class="app-shell">
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <ul>
-            <li onclick="location.href='<?= site_url('DashBoard/index') ?>'">Dashboard</li>
-            <li class="active" onclick="location.href='<?= site_url('DashBoard/sales') ?>'">New Sale</li>
-            <li onclick="location.href='<?= site_url('sales') ?>'">Sales</li>
-            <li onclick="location.href='<?= site_url('products') ?>'">Products</li>
-            <li onclick="location.href='<?= site_url('customers') ?>'">Customers</li>
-            <li onclick="location.href='<?= site_url('cashiers') ?>'">Cashiers</li>
-        </ul>
+  <div class="Main">
+    <div id="box1" class="box1">
+<div class="nav">
+        <nav>
+          <a href="<?= base_url('DashBoard/index') ?>">Dashboard</a>
+          <a href="<?= base_url('newsales') ?>">New Sale</a>
+          <a href="<?= base_url('sales') ?>">Sale</a>
+          <a href="<?= base_url('productcontroller') ?>">Products</a>
+          <a href="<?= base_url('customers') ?>">Customers</a>
+          <a href="<?= base_url('cashiers') ?>">Cashiers</a>
+        </nav>
+      </div>
     </div>
 
-    <!-- Main -->
-    <div class="main">
-        <div class="topbar">
-            <h1>New Sale</h1>
-            <div><strong>Mwansa Tembo</strong></div>
+    <div id="box2" class="box2">
+      <h4 style="margin:0; color:#0A5741;">SALE HISTORY</h4>
 
-        <div class="content">
-            <!-- Flash messages -->
-            <?php if ($msg = session()->getFlashdata('message')): ?>
-                <div class="flash-msg"><?= esc($msg) ?></div>
+<div id="search">
+        <form method="get" action="<?= base_url('sales/search') ?>">
+        <input
+          type="text"
+          name="search"
+          placeholder="Search sales, cashier or ID"
+          style="flex:1; padding:8px 10px; border-radius:12px; border:1px solid #e6e7ea; outline:none;"
+        />
+        <button type="submit">Search</button>
+        </form>
+      </div>
+
+      <?php if (session()->getFlashdata('message')): ?>
+        <div style="background:#108b04; color:#fff; padding:8px 12px; border-radius:8px;">
+          <?= esc(session()->getFlashdata('message')) ?>
+        </div>
+      <?php endif; ?>
+
+      <div class="topnavbar">
+        <nav class="nav2">
+          <a href="<?= base_url('sales/status?status=ALL')  ?>">ALL</a>
+          <a href="<?= base_url('sales/status?status=OPEN')  ?>">OPEN</a>
+          <a href="<?= base_url('sales/status?status=PAID')  ?>">PAID</a>
+          <a href="<?= base_url('sales/status?status=CANCELED')  ?>">CANCELED</a>
+          
+        </nav>
+      </div>
+
+      <div class="saletables" aria-live="polite">
+        <table>
+          <thead>
+            <tr>
+              <th >SALE</th>
+              <th>DATE</th>
+              <th>CASHIER</th>
+              <th>ITEMS</th>
+              <th>TOTAL</th>
+              <th>STATUS</th>
+              <th>ACTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php if (empty($Sales)): ?>
+              <tr>
+                <td colspan="7" style="text-align:center; padding:20px; color:#888;">
+                  No sales found.
+                </td>
+              </tr>
+            <?php else: ?>
+              <?php foreach ($Sales as $sale): ?>
+                <tr>
+                  <td><?= esc($sale['sale_id']) ?></td>
+                  <td><?= esc($sale['sale_date']) ?></td>
+                  <td><?= esc($sale['username']) ?></td>
+                  <td><?= esc($sale['items']) ?></td>
+                  <td><?= esc($sale['total_amount']) ?></td>
+                  <td><?= esc($sale['status']) ?></td>
+                  <td><button style="padding:6px 10px; border-radius:8px; border:none; background:#0A5741; color:#fff; cursor:pointer;">View</button></td>
+                </tr>
+              <?php endforeach; ?>
             <?php endif; ?>
-            <?php if ($err = session()->getFlashdata('error')): ?>
-                <div class="flash-msg error"><?= esc($err) ?></div>
-            <?php endif; ?>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
 
-            <div class="pos-layout">
-                <!-- LEFT: Product Catalog -->
-                <div class="catalog">
-                    <form method="GET" class="search-form" action="<?= site_url('DashBoard/sales') ?>">
-                        <input type="text" name="search" placeholder="Search products..." value="<?= esc($search ?? '') ?>">
-                        <button type="submit">Search</button>
-                    </form>
+  <div class="calendar-wrapper">
+  <form method="get" action="<?= base_url('sales/searchfilter') ?>" class="calender">
 
-                    <div class="category-scroller">
-                        <a href="<?= site_url('DashBoard/sales') ?>" class="active">All</a>
-                        <?php if (!empty($category)): ?>
-                        <?php foreach ($category as $cat): ?>
-                            <a href="<?= site_url('DashBoard/sales?category=' . urlencode($cat['category_name'])) ?>"><?= esc($cat['category_name']) ?></a>
-                        <?php endforeach; ?>
-                        <?php endif; ?>
-                    </div>
+    <h4>Filter</h4>
+    <p>Search by day, month and year</p>
 
-                    <div class="product-grid">
-                        <?php if (!empty($products)): ?>
-                            <?php foreach ($products as $product): ?>
-                                <div class="product-card">
-                                    <div style="height:110px;background:#f3f4f6;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:3rem;">📦</div>
-                                    <div class="product-name"><?= esc($product['product_name']) ?></div>
-                                    <div><?= esc($product['category'] ?? '') ?></div>
-                                    <div class="product-price">K<?= number_format($product['price'],2) ?></div>
-                                    <button type="button"
-                                            class="btn btn-primary add-to-cart-btn"
-                                            style="margin-top:10px;width:100%;padding:8px;"
-                                            data-product-id="<?= $product['product_id'] ?>"
-                                            data-product-name="<?= esc($product['product_name']) ?>"
-                                            data-price="<?= $product['price'] ?>">
-                                        Add to Sale
-                                    </button>
-                                </div>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <p>No products found.</p>
-                        <?php endif; ?>
-                    </div><!-- /catalog -->
+    <!-- Month selector -->
+    <label>Month</label><br>
+    <select name="month">
+      <option value="">Select month</option>
+      <option value="01">January</option>
+      <option value="02">February</option>
+      <option value="03">March</option>
+      <option value="04">April</option>
+      <option value="05">May</option>
+      <option value="06">June</option>
+      <option value="07">July</option>
+      <option value="08">August</option>
+      <option value="09">September</option>
+      <option value="10">October</option>
+      <option value="11">November</option>
+      <option value="12">December</option>
+    </select><br>
 
-                <!-- RIGHT: Receipt Tape -->
-                <div class="receipt-tape" id="receipt-tape">
-                    <div class="receipt-head">
-                        <div><strong>Tillkeep · Sale #NEW</strong></div>
-                        <div><?= date('M d, g:i A') ?></div>
-                        <div style="margin-top:10px;padding:10px;background:#f8fafc;border-radius:8px;">Walk-in Customer</div>
+    <!-- Year input -->
+    <label>Year</label>
+    <input type="text" name="year" placeholder="Enter e.g. 2026">
 
-                    <div class="receipt-lines" id="receipt-lines">
-                        <?php if (!empty($cart)): ?>
-                            <?php foreach ($cart as $item): ?>
-                                <div class="receipt-line">
-                                    <div>
-                                        <strong><?= esc($item['product_name']) ?></strong>
-                                        <br><small>K<?= number_format($item['price']??0,2) ?> × <?= $item['qty']??1 ?></small>
-                                    </div>
-                                    <div style="text-align:right;">
-                                        K<?= number_format(($item['price']??0)*($item['qty']??1),2) ?>
-                                    </div>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <p class="receipt-empty">No items yet — click a product to add</p>
-                        <?php endif; ?>
-                    </div>
+    <!-- Day grid -->
+    <div class="months">
+      <label>
+      <input type="radio" name="day" value="1">
+      <span>1</span>
+      </label>
+      <label><input type="radio" name="day" value="2"> 2</label>
+      <label><input type="radio" name="day" value="3"> 3</label>
+      <label><input type="radio" name="day" value="4"> 4</label>
+      <label><input type="radio" name="day" value="5"> 5</label>
+      <label><input type="radio" name="day" value="6"> 6</label>
+      <label><input type="radio" name="day" value="7"> 7</label>
+      <label><input type="radio" name="day" value="8"> 8</label>
+      <label><input type="radio" name="day" value="9"> 9</label>
+      <label><input type="radio" name="day" value="10"> 10</label>
+      <label><input type="radio" name="day" value="1"> 11</label>
+      <label><input type="radio" name="day" value="2"> 12</label>
+      <label><input type="radio" name="day" value="3"> 13</label>
+      <label><input type="radio" name="day" value="4"> 14</label>
+      <label><input type="radio" name="day" value="5">15</label>
+      <label><input type="radio" name="day" value="6"> 16</label>
+      <label><input type="radio" name="day" value="7"> 17</label>
+      <label><input type="radio" name="day" value="8"> 18</label>
+      <label><input type="radio" name="day" value="9"> 19</label>
+      <label><input type="radio" name="day" value="10"> 20</label>
+      <label><input type="radio" name="day" value="1"> 21</label>
+      <label><input type="radio" name="day" value="2"> 22</label>
+      <label><input type="radio" name="day" value="3"> 23</label>
+      <label><input type="radio" name="day" value="4"> 24</label>
+      <label><input type="radio" name="day" value="5"> 25</label>
+      <label><input type="radio" name="day" value="6"> 26</label>
+      <label><input type="radio" name="day" value="7"> 27</label>
+      <label><input type="radio" name="day" value="8"> 28</label>
+      <label><input type="radio" name="day" value="9"> 29</label>
+      <label><input type="radio" name="day" value="10"> 30</label>
+      
+      <label><input type="radio" name="day" value="31"> 31</label>
+    </div>
 
-                    <div class="receipt-totals">
-                        <div class="totals-row"><span>Items</span><span id="total-items"><?= $total_items ?? 0 ?></span></div>
-                        <div class="totals-row grand-total"><span>Total</span><span id="total-amount">K<?= number_format($total_amount ?? 0, 2) ?></span></div>
+    <!-- Optional submit button if user wants to search by month/year only -->
+    <button type="submit" class="submit">Submit</button>
 
-                    <div class="receipt-actions">
-                        <form method="POST" action="<?= site_url('DashBoard/checkout') ?>">
-                            <?= csrf_field() ?>
-                            <button type="submit" class="btn btn-primary" id="checkout-btn" <?= empty($cart) ? 'disabled' : '' ?>>Charge Customer</button>
-                        </form>
-                        <form method="POST" action="<?= site_url('DashBoard/clear_cart') ?>">
-                            <?= csrf_field() ?>
-                            <button type="submit" class="btn btn-danger" id="clear-cart-btn" <?= empty($cart) ? 'disabled' : '' ?>>Clear Sale</button>
-                        </form>
-                    </div><!-- /receipt-tape -->
-            </div><!-- /pos-layout -->
-        </div><!-- /content -->
-    </div><!-- /main -->
-</div><!-- /app-shell -->
+  </form>
+</div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.add-to-cart-btn').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            var formData = new FormData();
-            formData.append('product_id',   this.dataset.productId);
-            formData.append('product_name', this.dataset.productName);
-            formData.append('price',        this.dataset.price);
-            formData.append('qty',          1);
 
-            fetch("<?= site_url('DashBoard/add_to_cart') ?>", {
-                method: "POST",
-                headers: { "X-Requested-With": "XMLHttpRequest" },
-                body: formData
-            })
-            .then(function() {
-                window.location.href = "<?= site_url('DashBoard/sales') ?>";
-            })
-            .catch(function(err) {
-                console.error('Add to cart error:', err);
-            });
-        });
-    });
-});
-</script>
+
+  
+
+
+  
+
+  </div>
 </body>
+
+
 </html>

@@ -30,4 +30,43 @@ class ProductModel extends Model
         return $this->like('name', $keyword)
                     ->findAll();
     }
+
+    public function products(){
+        $product=new ProductModel();
+        $products=$this->request->getGet('product_id');
+
+        $product->where('product_id',$products)
+                ->select('product_name,barcode,price,stock_quantity')
+                ->limit(30)
+                ->findAll();
+
+    }
+    public function productcategory(){
+        $model=new CategoryModel();
+        $category=$model->select('product_name,category_id,barcode,price,stock')
+                          ->join('category',
+                          'category.category_id=product.category_id')
+                          ->orderBy('product_name','ASEC')
+                          ->groupBy('product_name')
+                          ->limit(30)
+                          ->findAll();
+
+
+    }
+    public function deletecategory($category_id){
+       
+
+       if( !$this->where('category_id',$category_id)
+                                 
+        ->limit(1)
+        ->delete()
+         
+        ){
+            return false;
+
+        }
+
+
+       
+    }
 }
