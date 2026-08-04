@@ -1,0 +1,58 @@
+CRITICAL - 2026-06-27 08:00:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "product2/index.php"
+[Method: GET, Route: product2]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('product2/index.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('product2/index', [], true)
+ 3 APPPATH\Controllers\product2.php(15): view('product2/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Product2->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product2))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-27 08:22:26 --> ErrorException: Undefined variable $Product2
+[Method: GET, Route: product2]
+in APPPATH\Views\product2\index.php on line 9.
+ 1 APPPATH\Views\product2\index.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Product2', 'C:\\laragon\\www\\codeigniter4\\app\\Views\\product2\\index.php', 9)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\codeigniter4\\app\\Views\\product2\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('product2/index', [], true)
+ 5 APPPATH\Controllers\product2.php(15): view('product2/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Product2->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product2))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-27 10:08:26 --> ParseError: syntax error, unexpected token "<"
+[Method: GET, Route: product2]
+in APPPATH\Views\product2\index.php on line 16.
+ 1 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('product2/index', [], true)
+ 3 APPPATH\Controllers\product2.php(15): view('product2/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Product2->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product2))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-27 10:40:27 --> ParseError: syntax error, unexpected token "<"
+[Method: GET, Route: product2]
+in APPPATH\Views\product2\index.php on line 12.
+ 1 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('product2/index', [], true)
+ 3 APPPATH\Controllers\product2.php(15): view('product2/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Product2->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product2))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+DEBUG - 2026-06-27 21:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-27 21:13:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-27 21:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-27 21:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
