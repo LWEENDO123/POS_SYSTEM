@@ -36,6 +36,14 @@
     .sidebar nav li:hover{ background:rgba(255,255,255,0.06) }
     .sidebar .user{ margin-top:20px; font-size:13px; color:rgba(255,255,255,0.85) }
 
+    /* Style the shared nav partial to match this page's sidebar */
+    .sidebar .nav a{
+      display:block; padding:12px 10px; border-radius:6px; margin-bottom:6px;
+      color:#fff; text-decoration:none; font-size:14px;
+    }
+    .sidebar .nav a:hover{ background:rgba(255,255,255,0.06); }
+    .sidebar .nav a.active{ background:rgba(255,255,255,0.14); font-weight:700; }
+
     .main{
       margin-left:240px;
       padding:20px;
@@ -109,14 +117,10 @@
     <!-- Sidebar -->
     <aside class="sidebar" role="navigation" aria-label="Main navigation">
       <nav>
-        <ul>
-          <li onclick="location.href='<?= site_url('DashBoard/index') ?>'">Dashboard</li>
-          <li onclick="location.href='<?= site_url('newsales') ?>'">New Sale</li>
-          <li onclick="location.href='<?= site_url('sales') ?>'">Sales</li>
-          <li onclick="location.href='<?= site_url('products') ?>'">Products</li>
-          <li onclick="location.href='<?= site_url('customers') ?>'">Customers</li>
-          <li onclick="location.href='<?= site_url('cashiers') ?>'">Cashiers</li>
-        </ul>
+        <!-- SHARED NAV: one partial for every page = the same links
+             everywhere (fixes the 404s from page-specific URLs like
+             site_url('products'), which had no route). -->
+        <?= view('Dashboard/_nav', ['active' => 'dashboard']) ?>
       </nav>
 
       <div class="user">
@@ -127,12 +131,16 @@
 
     <!-- Main content -->
     <main class="main" role="main">
+      <?= view('partials/_flash_messages') ?>
       <div class="section-head">
         <div>
           <h2>Welcome to the Dashboard</h2>
           <p class="muted">Overview of sales and inventory</p>
         </div>
-        <a class="manage-btn" href="<?= site_url('manage') ?>">Manage</a>
+        <!-- FIX (404): this pointed at site_url('manage') - a route that
+             does not exist, so it 404'd on every click. Product management
+             is the closest match, so it now goes to the Products page. -->
+        <a class="manage-btn" href="<?= site_url('productcontroller') ?>">Manage</a>
       </div>
 
       <!-- Summary cards -->
@@ -171,7 +179,6 @@
                 <th>Sale</th>
                 <th>Date</th>
                 <th>Cashier</th>
-                <th>Customer</th>
                 <th class="num">Items</th>
                 <th class="num">Total</th>
                 <th>Status</th>
@@ -185,7 +192,6 @@
                     <td><?= esc($sale['sale_id']) ?></td>
                     <td><?= esc($sale['sale_date']) ?></td>
                     <td><?= esc($sale['username'])?></td>
-                    <td><?= esc($sale['firstname'] ?? 'Walk-in Customer') ?></td>
                     <td class="num"><?= intval($sale['items_count']) ?></td>
                     <td class="num">K<?= number_format($sale['total_amount'], 2) ?></td>
                     <td>
@@ -198,7 +204,11 @@
                       <?php endif; ?>
                     </td>
                     <td>
-                      <a href="<?= site_url('sales/view/' . $sale['sale_id']) ?>">View</a>
+                      <!-- POPUP: loads the receipt into an on-page modal
+                           instead of navigating away. sales/view/{id} keeps
+                           working as a full-page fallback (route added). -->
+                      <a href="<?= site_url('sales/view/' . $sale['sale_id']) ?>"
+                         onclick="openReceiptModal('<?= esc($sale['sale_id']) ?>'); return false;">View</a>
                     </td>
                   </tr>
                 <?php endforeach; ?>
@@ -230,5 +240,9 @@
 
     </main>
   </div>
+
+  <!-- Receipt popup (modal) - shared partial -->
+  <?= view('Dashboard/_receipt_modal') ?>
+
 </body>
 </html>

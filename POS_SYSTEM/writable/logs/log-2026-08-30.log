@@ -1,0 +1,850 @@
+DEBUG - 2026-08-30 05:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 05:39:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 05:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 05:39:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-08-30 05:39:53 --> Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'pos_system.product.product_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Newsales.php(75): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->Newsale()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-08-30 05:39:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'pos_system.product.product_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[Method: GET, Route: newsales]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50', [], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Newsales.php(75): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->Newsale()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-08-30 05:39:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'pos_system.product.product_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50', [], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Newsales.php(75): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->Newsale()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-08-30 05:39:53 --> [Caused by] mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'pos_system.product.product_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Newsales.php(75): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->Newsale()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-08-30 05:42:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-08-30 05:42:12 --> Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'pos_system.product.product_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Newsales.php(75): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->Newsale()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-08-30 05:42:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'pos_system.product.product_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[Method: GET, Route: newsales]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50', [], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Newsales.php(75): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->Newsale()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-08-30 05:42:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'pos_system.product.product_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50', [], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Newsales.php(75): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->Newsale()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-08-30 05:42:12 --> [Caused by] mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'pos_system.product.product_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id`=`product`.`category_id`
+GROUP BY `product_name`
+ORDER BY `product_name` ASC
+ LIMIT 50', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Newsales.php(75): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->Newsale()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-08-30 05:44:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 05:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 05:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 05:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 05:46:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 05:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 05:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 06:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 06:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-08-30 06:04:28 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (87, \'48\', 1, 45, 45, \'2026-08-30 06:04:28\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (87, \'48\', 1, 45, 45, \'2026-08-30 06:04:28\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (87, \'48\', 1, 45, 45, \'2026-08-30 06:04:28\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 06:04:28 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (87, \'67\', 1, 25, 25, \'2026-08-30 06:04:28\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (87, \'67\', 1, 25, 25, \'2026-08-30 06:04:28\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (87, \'67\', 1, 25, 25, \'2026-08-30 06:04:28\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-08-30 06:04:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:21:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:21:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-08-30 10:21:56 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\POS_SYSTEM\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\POS_SYSTEM\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\POS_SYSTEM\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\POS_SYSTEM\app\Controllers\AuthController.php(33): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(974): App\Controllers\AuthController->userlogin()
+#8 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\POS_SYSTEM\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\POS_SYSTEM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\POS_SYSTEM\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\POS_SYSTEM\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\POS_SYSTEM\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\POS_SYSTEM\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\POS_SYSTEM\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\POS_SYSTEM\app\Controllers\AuthController.php(33): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(974): App\Controllers\AuthController->userlogin()
+#7 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\POS_SYSTEM\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\POS_SYSTEM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\POS_SYSTEM\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\POS_SYSTEM\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2026-08-30 10:21:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: userlogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(33): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->userlogin()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:22:01 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\POS_SYSTEM\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\POS_SYSTEM\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\POS_SYSTEM\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\POS_SYSTEM\app\Controllers\AuthController.php(33): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(974): App\Controllers\AuthController->userlogin()
+#8 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\POS_SYSTEM\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\POS_SYSTEM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\POS_SYSTEM\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\POS_SYSTEM\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\POS_SYSTEM\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\POS_SYSTEM\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\POS_SYSTEM\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\POS_SYSTEM\app\Controllers\AuthController.php(33): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(974): App\Controllers\AuthController->userlogin()
+#7 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\POS_SYSTEM\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\POS_SYSTEM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\POS_SYSTEM\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\POS_SYSTEM\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2026-08-30 10:22:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: userlogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(33): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->userlogin()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-08-30 10:23:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:23:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-08-30 10:25:19 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (88, \'27\', 1, 25, 25, \'2026-08-30 10:25:19\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (88, \'27\', 1, 25, 25, \'2026-08-30 10:25:19\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (88, \'27\', 1, 25, 25, \'2026-08-30 10:25:19\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:25:19 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (88, \'53\', 1, 20, 20, \'2026-08-30 10:25:19\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (88, \'53\', 1, 20, 20, \'2026-08-30 10:25:19\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (88, \'53\', 1, 20, 20, \'2026-08-30 10:25:19\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-08-30 10:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:25:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-08-30 10:25:48 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (89, \'27\', 1, 25, 25, \'2026-08-30 10:25:48\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (89, \'27\', 1, 25, 25, \'2026-08-30 10:25:48\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (89, \'27\', 1, 25, 25, \'2026-08-30 10:25:48\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:25:48 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (89, \'53\', 1, 20, 20, \'2026-08-30 10:25:48\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (89, \'53\', 1, 20, 20, \'2026-08-30 10:25:48\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (89, \'53\', 1, 20, 20, \'2026-08-30 10:25:48\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:25:48 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (89, \'50\', 1, 14, 14, \'2026-08-30 10:25:48\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (89, \'50\', 1, 14, 14, \'2026-08-30 10:25:48\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (89, \'50\', 1, 14, 14, \'2026-08-30 10:25:48\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-08-30 10:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:25:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:25:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:25:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:25:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:25:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:25:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:25:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:25:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:26:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:26:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:26:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:26:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:26:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-08-30 10:26:07 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'27\', 2, 25, 50, \'2026-08-30 10:26:07\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'27\', 2, 25, 50, \'2026-08-30 10:26:07\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'27\', 2, 25, 50, \'2026-08-30 10:26:07\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:26:07 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'53\', 1, 20, 20, \'2026-08-30 10:26:07\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'53\', 1, 20, 20, \'2026-08-30 10:26:07\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'53\', 1, 20, 20, \'2026-08-30 10:26:07\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:26:07 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'50\', 2, 14, 28, \'2026-08-30 10:26:07\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'50\', 2, 14, 28, \'2026-08-30 10:26:07\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'50\', 2, 14, 28, \'2026-08-30 10:26:07\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:26:07 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'67\', 1, 25, 25, \'2026-08-30 10:26:07\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'67\', 1, 25, 25, \'2026-08-30 10:26:07\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'67\', 1, 25, 25, \'2026-08-30 10:26:07\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:26:07 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'48\', 1, 45, 45, \'2026-08-30 10:26:07\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'48\', 1, 45, 45, \'2026-08-30 10:26:07\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'48\', 1, 45, 45, \'2026-08-30 10:26:07\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:26:07 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'26\', 1, 45, 45, \'2026-08-30 10:26:07\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'26\', 1, 45, 45, \'2026-08-30 10:26:07\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'26\', 1, 45, 45, \'2026-08-30 10:26:07\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:26:07 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'60\', 1, 32, 32, \'2026-08-30 10:26:07\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'60\', 1, 32, 32, \'2026-08-30 10:26:07\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'60\', 1, 32, 32, \'2026-08-30 10:26:07\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:26:07 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'40\', 1, 35, 35, \'2026-08-30 10:26:07\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'40\', 1, 35, 35, \'2026-08-30 10:26:07\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (90, \'40\', 1, 35, 35, \'2026-08-30 10:26:07\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-08-30 10:26:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:26:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:26:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:26:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:31:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:31:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:31:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-08-30 10:31:21 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'27\', 4, 25, 100, \'2026-08-30 10:31:21\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'27\', 4, 25, 100, \'2026-08-30 10:31:21\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'27\', 4, 25, 100, \'2026-08-30 10:31:21\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:31:21 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'53\', 2, 20, 40, \'2026-08-30 10:31:21\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'53\', 2, 20, 40, \'2026-08-30 10:31:21\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'53\', 2, 20, 40, \'2026-08-30 10:31:21\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:31:21 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'50\', 3, 14, 42, \'2026-08-30 10:31:21\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'50\', 3, 14, 42, \'2026-08-30 10:31:21\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'50\', 3, 14, 42, \'2026-08-30 10:31:21\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:31:21 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'67\', 1, 25, 25, \'2026-08-30 10:31:21\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'67\', 1, 25, 25, \'2026-08-30 10:31:21\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'67\', 1, 25, 25, \'2026-08-30 10:31:21\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:31:21 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'48\', 2, 45, 90, \'2026-08-30 10:31:21\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'48\', 2, 45, 90, \'2026-08-30 10:31:21\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'48\', 2, 45, 90, \'2026-08-30 10:31:21\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:31:21 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'26\', 1, 45, 45, \'2026-08-30 10:31:21\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'26\', 1, 45, 45, \'2026-08-30 10:31:21\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'26\', 1, 45, 45, \'2026-08-30 10:31:21\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:31:21 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'60\', 1, 32, 32, \'2026-08-30 10:31:21\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'60\', 1, 32, 32, \'2026-08-30 10:31:21\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'60\', 1, 32, 32, \'2026-08-30 10:31:21\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+ERROR - 2026-08-30 10:31:21 --> Unknown column 'created_by_user_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'40\', 1, 35, 35, \'2026-08-30 10:31:21\', \'2147483647\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'40\', 1, 35, 35, \'2026-08-30 10:31:21\', \'2147483647\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (91, \'40\', 1, 35, 35, \'2026-08-30 10:31:21\', \'2147483647\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sale_item` (`sale_id`, `product_id`, `quantity`, `unit_price`, `subtotal`, `Date`, `created_by_user_id`) VALUES (:sale_id:, :product_id:, :quantity:, :unit_price:, :subtotal:, :Date:, :created_by_user_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Newsales.php(712): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->checkout()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-08-30 10:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:43:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:43:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 10:43:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:42:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:42:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:42:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:42:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:42:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:42:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:42:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:42:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 11:43:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 19:41:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 19:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 19:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 19:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 19:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 19:45:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 19:45:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 19:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 19:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 19:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 19:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 19:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 19:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 19:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 19:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 19:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-30 19:57:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -77,6 +77,8 @@
         <!-- Subtext -->
         <p>Please fill in your details to register.</p>
 
+        <?= view('partials/_flash_messages') ?>
+
         <!-- Registration form -->
         <form action="<?= site_url('create-account') ?>" method="post">
             <label for="firstname">Firstname</label>

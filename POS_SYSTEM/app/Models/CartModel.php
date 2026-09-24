@@ -11,11 +11,14 @@ class CartModel extends Model
     protected $allowedFields = [
         'product_id',
         'product_name',
+        'category_id',
         'category_name',
         'price',
         'qty',
         'total',
-        'created_by_user_id',
+        'customer_id',
+        'customer_name',
+        'created_by_user_name',
     ];
 }
 

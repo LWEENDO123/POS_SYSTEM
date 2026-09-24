@@ -1,0 +1,182 @@
+DEBUG - 2026-09-21 05:36:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 05:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 05:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 05:36:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 05:37:02 --> SELECT `sale`.`sale_id`, `sale`.`sale_date`, `user`.`username` AS `username`, COUNT(sale_item.sale_item_id) AS items_count, `sale`.`total_amount`, `sale`.`status`
+FROM `sale`
+LEFT JOIN `sale_item` ON `sale`.`sale_id` = `sale_item`.`sale_id`
+LEFT JOIN `user` ON `sale`.`handled_by_user` = `user`.`user_id`
+WHERE `sale`.`status` IN ('OPEN','PENDING')
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 50
+DEBUG - 2026-09-21 05:37:02 --> Sales status result: requested=OPEN, count=28, ids=128,116,110,111,100,101,103,96,95,94,3,4,85,79,75,69,64,60,55,51,44,39,34,27,23,18,14,9
+DEBUG - 2026-09-21 05:37:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 05:37:04 --> SELECT `sale`.`sale_id`, `sale`.`sale_date`, `user`.`username` AS `username`, COUNT(sale_item.sale_item_id) AS items_count, `sale`.`total_amount`, `sale`.`status`
+FROM `sale`
+LEFT JOIN `sale_item` ON `sale`.`sale_id` = `sale_item`.`sale_id`
+LEFT JOIN `user` ON `sale`.`handled_by_user` = `user`.`user_id`
+WHERE `sale`.`status` = 'PAID'
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 50
+DEBUG - 2026-09-21 05:37:04 --> Sales status result: requested=PAID, count=50, ids=136,135,134,133,132,131,126,125,117,115,112,113,114,107,97,99,102,104,105,106,108,93,92,6,2,1,86,84,82,80,81,78,77,76,74,72,71,70,68,67,66,65,63,62,61,58,57,56,54,53
+DEBUG - 2026-09-21 05:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 05:37:05 --> SELECT `sale`.`sale_id`, `sale`.`sale_date`, `user`.`username` AS `username`, COUNT(sale_item.sale_item_id) AS items_count, `sale`.`total_amount`, `sale`.`status`
+FROM `sale`
+LEFT JOIN `sale_item` ON `sale`.`sale_id` = `sale_item`.`sale_id`
+LEFT JOIN `user` ON `sale`.`handled_by_user` = `user`.`user_id`
+WHERE `sale`.`status` IN ('CANCELED','CANCELLED')
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 50
+DEBUG - 2026-09-21 05:37:05 --> Sales status result: requested=CANCELED, count=10, ids=127,5,83,73,59,49,41,31,21,11
+DEBUG - 2026-09-21 05:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 05:37:07 --> SELECT `sale`.`sale_id`, `sale`.`sale_date`, `user`.`username` AS `username`, COUNT(sale_item.sale_item_id) AS items_count, `sale`.`total_amount`, `sale`.`status`
+FROM `sale`
+LEFT JOIN `sale_item` ON `sale`.`sale_id` = `sale_item`.`sale_id`
+LEFT JOIN `user` ON `sale`.`handled_by_user` = `user`.`user_id`
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 50
+DEBUG - 2026-09-21 05:37:07 --> Sales status result: requested=ALL, count=50, ids=135,134,133,132,136,128,117,125,126,131,127,116,114,115,110,111,112,113,102,103,104,105,106,107,109,108,101,97,98,99,100,96,95,92,93,94,6,2,1,5,4,3,86,85,84,82,83,80,81,78
+DEBUG - 2026-09-21 05:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 05:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:45:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:49:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:51:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:51:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:51:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-09-21 09:51:36 --> ErrorException: Undefined variable $product_id
+[Method: POST, Route: newsales/cart]
+in APPPATH\Controllers\NewSalesController.php on line 238.
+ 1 APPPATH\Controllers\NewSalesController.php(238): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product_id', 'C:\\laragon\\www\\POS_SYSTEM\\app\\Controllers\\NewSalesController.php', 238)
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\NewSalesController->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NewSalesController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-09-21 09:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:53:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:53:12 --> Checkout committed: sale_id=137, user_id=jackbanda, item_count=2
+DEBUG - 2026-09-21 09:53:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 09:53:28 --> Payment session check: sale_id=137, status=PENDING, total=189
+DEBUG - 2026-09-21 09:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:04:39 --> Checkout committed: sale_id=138, user_id=jackbanda, item_count=4
+DEBUG - 2026-09-21 10:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:05:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 10:05:32 --> Payment session check: sale_id=138, status=PENDING, total=431
+DEBUG - 2026-09-21 10:05:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 11:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 11:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 11:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 11:33:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 11:33:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 11:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 11:33:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 11:33:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 11:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:13:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:13:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:13:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:14:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:14:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:14:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:14:18 --> Checkout committed: sale_id=139, user_id=jackbanda, item_count=2
+DEBUG - 2026-09-21 13:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:14:28 --> Payment session check: sale_id=139, status=PENDING, total=107
+DEBUG - 2026-09-21 13:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:21:23 --> Session: Initialization under CLI aborted.
+DEBUG - 2026-09-21 13:23:18 --> Session: Initialization under CLI aborted.
+DEBUG - 2026-09-21 13:23:39 --> Session: Initialization under CLI aborted.
+DEBUG - 2026-09-21 13:23:53 --> Session: Initialization under CLI aborted.
+DEBUG - 2026-09-21 13:31:45 --> Session: Initialization under CLI aborted.
+DEBUG - 2026-09-21 13:31:54 --> Session: Initialization under CLI aborted.
+DEBUG - 2026-09-21 13:33:34 --> Session: Initialization under CLI aborted.
+DEBUG - 2026-09-21 13:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:35:25 --> Checkout committed: sale_id=140, user_id=jackbanda, item_count=2
+DEBUG - 2026-09-21 13:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:35:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 13:35:34 --> Payment session check: sale_id=140, status=PENDING, total=73
+DEBUG - 2026-09-21 13:35:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:00:25 --> Session: Initialization under CLI aborted.
+DEBUG - 2026-09-21 14:08:58 --> Session: Initialization under CLI aborted.
+DEBUG - 2026-09-21 14:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:37:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:37:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:37:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:38:23 --> Checkout committed: sale_id=141, user_id=jackbanda, item_count=2
+DEBUG - 2026-09-21 14:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:38:39 --> Payment session check: sale_id=141, status=PENDING, total=68
+DEBUG - 2026-09-21 14:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-21 14:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

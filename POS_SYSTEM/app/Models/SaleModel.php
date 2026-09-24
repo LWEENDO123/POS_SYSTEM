@@ -10,35 +10,35 @@ class SaleModel extends Model
 
     protected $primaryKey = 'sale_id';
 
-    protected $allowedFields = [
+protected $allowedFields = [
         
-        'customer_id',
-        'user_id',
-        'sale_date',
+        'sale_number',
+        'status',
         'total_amount',
-        'status'
+        'sale_date',
+        'handled_by_user'
+
     ];
 
-    public function getSales($limit = NULL,$status ='PAID'){ 
+    
+
+public function getSales($limit = NULL){ 
         
 
     
-     $this->select("
-                sale.sale_id, 
-                sale.sale_date,
-                sale.total_amount,
-                sale.status,
-                customer.firstname,
-                user.username,
-                COUNT(sale_item.sale_item_id) AS items_count
-            ");
+$this->select("
+    sale.sale_id, 
+    sale.sale_date,
+    sale.total_amount,
+    sale.status,
+    user.username AS username,
+    SUM(sale_item.quantity) AS items_count
+")
+->join('user', 'user.username = sale.handled_by_user', 'left')
+->join('sale_item', 'sale_item.sale_id = sale.sale_id', 'left')
+->groupBy('sale.sale_id')
+->orderBy('sale.sale_date', 'DESC');
 
-            $this->join('customer', 'customer.customer_id = sale.customer_id', 'left');
-            $this->join('user', 'user.user_id = sale.user_id', 'left');
-            $this->join('sale_item', 'sale_item.sale_id = sale.sale_id', 'left');
-            $this->where('status',$status);
-            $this->groupBy('sale.sale_id');
-            $this->orderBy('sale.sale_date', 'DESC');
             if(
                 empty($limit)
             ){
@@ -46,7 +46,24 @@ class SaleModel extends Model
                 $this->limit($limit);
 
             }
+            log_message('debug', 'First sale row: ' . json_encode($results[0] ?? []));
             return $this->findAll();
 
     }
-}
+
+    public function getSaleStatus($sale_id)
+    {
+        return $this->select('status')->find($sale_id);
+    }
+
+    /*
+    Mark a sale's status (used by payment_success/failed/pending/cancelled).
+    */
+    public function updateStatus($sale_id, $status)
+    {
+        return $this->update($sale_id, ['status' => $status]);
+    }
+
+    
+    }
+

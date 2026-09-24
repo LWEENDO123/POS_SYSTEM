@@ -12,8 +12,20 @@ class PaymentModel extends Model
 
     protected $allowedFields = [
         'sale_id',
+        'amount',
         'payment_method',
-        'amount_paid',
+        'payment_status',
+        'processed_by_user_id',
         'payment_date'
     ];
+
+    /*
+    Get the payment record for a sale (used by Newsales::receipt).
+    */
+    public function getPaymentBySale($sale_id)
+    {
+        return $this->select('payment_method, payment_status')
+                    ->where('sale_id', $sale_id)
+                    ->first();
+    }
 }

@@ -1,0 +1,505 @@
+DEBUG - 2026-09-23 08:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:38:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:38:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:40:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:40:19 --> session username value:'jackbanda'
+DEBUG - 2026-09-23 08:40:19 --> Checkout committed: sale_id=188, user_id=jackbanda, item_count=1
+DEBUG - 2026-09-23 08:40:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:42:53 --> Payment session check: sale_id=188, status=PENDING, total=45
+DEBUG - 2026-09-23 08:42:53 --> Fetched payment_status: 'SUCCESS'
+DEBUG - 2026-09-23 08:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:43:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:43:58 --> Payment session check: sale_id=, status=missing, total=
+DEBUG - 2026-09-23 08:43:58 --> Payment session cleared: clear_cart=no
+DEBUG - 2026-09-23 08:43:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:45:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:45:01 --> session username value:'jackbanda'
+DEBUG - 2026-09-23 08:45:01 --> Checkout committed: sale_id=189, user_id=jackbanda, item_count=1
+DEBUG - 2026-09-23 08:45:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:45:06 --> Payment session check: sale_id=189, status=PENDING, total=25
+DEBUG - 2026-09-23 08:45:06 --> Fetched payment_status: 'SUCCESS'
+DEBUG - 2026-09-23 08:45:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 08:45:19 --> Payment session check: sale_id=, status=missing, total=
+DEBUG - 2026-09-23 08:45:19 --> Payment session cleared: clear_cart=no
+DEBUG - 2026-09-23 08:45:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 09:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 09:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 09:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 09:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 09:38:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 09:39:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 09:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:02:51 --> SELECT `sale`.`sale_id`, `sale`.`sale_date`, `user`.`username` AS `username`, COUNT(sale_item.sale_item_id) AS items_count, `sale`.`total_amount`, `sale`.`status`
+FROM `sale`
+LEFT JOIN `sale_item` ON `sale`.`sale_id` = `sale_item`.`sale_id`
+LEFT JOIN `user` ON `sale`.`handled_by_user` = `user`.`user_id`
+LEFT JOIN `product` ON `product`.`product_id` = `sale_item`.`product_id`
+WHERE `product`.`product_name` LIKE '%Unknown%' ESCAPE '!'
+OR  `user`.`username` LIKE '%Unknown%' ESCAPE '!'
+OR  `sale`.`sale_id` LIKE '%Unknown%' ESCAPE '!'
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 50
+DEBUG - 2026-09-23 10:02:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:03:14 --> SELECT `sale`.`sale_id`, `sale`.`sale_date`, `user`.`username` AS `username`, COUNT(sale_item.sale_item_id) AS items_count, `sale`.`total_amount`, `sale`.`status`
+FROM `sale`
+LEFT JOIN `sale_item` ON `sale`.`sale_id` = `sale_item`.`sale_id`
+LEFT JOIN `user` ON `sale`.`handled_by_user` = `user`.`user_id`
+WHERE `sale`.`status` IN ('OPEN','PENDING')
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 50
+DEBUG - 2026-09-23 10:03:14 --> Sales status result: requested=OPEN, count=29, ids=144,145,172,128,110,111,100,101,96,95,94,3,4,85,79,75,69,64,60,55,51,44,39,34,27,23,18,14,9
+DEBUG - 2026-09-23 10:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:03:16 --> SELECT `sale`.`sale_id`, `sale`.`sale_date`, `user`.`username` AS `username`, COUNT(sale_item.sale_item_id) AS items_count, `sale`.`total_amount`, `sale`.`status`
+FROM `sale`
+LEFT JOIN `sale_item` ON `sale`.`sale_id` = `sale_item`.`sale_id`
+LEFT JOIN `user` ON `sale`.`handled_by_user` = `user`.`user_id`
+WHERE `sale`.`status` IN ('CANCELED','CANCELLED')
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 50
+DEBUG - 2026-09-23 10:03:16 --> Sales status result: requested=CANCELED, count=15, ids=142,147,149,154,167,127,5,83,73,59,49,41,31,21,11
+DEBUG - 2026-09-23 10:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:04:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:04:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:04:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:04:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:27:12 --> search term gotten: 'Air Freshener 300ml'
+DEBUG - 2026-09-23 10:27:12 --> output found after condition: Air Freshener 300ml
+DEBUG - 2026-09-23 10:27:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:27:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:28:01 --> search term gotten: 'Air Freshener 300ml'
+DEBUG - 2026-09-23 10:28:01 --> output found after condition: Air Freshener 300ml
+DEBUG - 2026-09-23 10:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:35:53 --> search term gotten: 'Apple Pie'
+DEBUG - 2026-09-23 10:35:53 --> output found after condition: Apple Pie
+DEBUG - 2026-09-23 10:35:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:35:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:39:00 --> output found after condition: Black Tea 100g
+DEBUG - 2026-09-23 10:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:41:55 --> output found after condition: Apple Pie
+DEBUG - 2026-09-23 10:41:55 --> products found(Ray debugging): 1
+DEBUG - 2026-09-23 10:41:55 --> first product(Ray debugging): {"product_name":"Apple Pie","category_name":"Bakery","barcode":"260000000308","price":"45","stock_quantity":"2"}
+DEBUG - 2026-09-23 10:41:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:48:08 --> output found after condition: Chocolate Cookies
+DEBUG - 2026-09-23 10:48:08 --> products found(Ray debugging): 1
+DEBUG - 2026-09-23 10:48:08 --> first product(Ray debugging): {"product_name":"Chocolate Cookies","category_name":"Snacks","barcode":"111114","price":"35","stock_quantity":"5"}
+DEBUG - 2026-09-23 10:48:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:48:55 --> output found after condition: c
+DEBUG - 2026-09-23 10:48:55 --> products found(Ray debugging): 26
+DEBUG - 2026-09-23 10:48:55 --> first product(Ray debugging): {"product_name":"Coca Cola 500ml","category_name":"Beverages","barcode":"111111","price":"18","stock_quantity":"45"}
+DEBUG - 2026-09-23 10:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:49:03 --> output found after condition: c
+DEBUG - 2026-09-23 10:49:03 --> products found(Ray debugging): 26
+DEBUG - 2026-09-23 10:49:03 --> first product(Ray debugging): {"product_name":"Coca Cola 500ml","category_name":"Beverages","barcode":"111111","price":"18","stock_quantity":"45"}
+DEBUG - 2026-09-23 10:49:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:49:18 --> output found after condition: b
+DEBUG - 2026-09-23 10:49:18 --> products found(Ray debugging): 17
+DEBUG - 2026-09-23 10:49:18 --> first product(Ray debugging): {"product_name":"White Bread","category_name":"Bakery","barcode":"111116","price":"25","stock_quantity":"20"}
+DEBUG - 2026-09-23 10:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:49:32 --> output found after condition: br
+DEBUG - 2026-09-23 10:49:32 --> products found(Ray debugging): 4
+DEBUG - 2026-09-23 10:49:32 --> first product(Ray debugging): {"product_name":"White Bread","category_name":"Bakery","barcode":"111116","price":"25","stock_quantity":"20"}
+DEBUG - 2026-09-23 10:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:50:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:50:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:50:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:50:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:51:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:51:17 --> output found after condition: 	260000000410
+DEBUG - 2026-09-23 10:51:17 --> products found(Ray debugging): 0
+DEBUG - 2026-09-23 10:51:17 --> first product(Ray debugging): []
+DEBUG - 2026-09-23 10:51:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:51:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:52:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:53:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:53:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:54:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:54:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:54:23 --> output found after condition: Coca Cola 500ml
+DEBUG - 2026-09-23 10:54:23 --> products found(Ray debugging): 2
+DEBUG - 2026-09-23 10:54:23 --> first product(Ray debugging): {"product_name":"Coca Cola 500ml","category_name":"Beverages","barcode":"111111","price":"18","stock_quantity":"45"}
+DEBUG - 2026-09-23 10:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 10:55:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 15:02:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 15:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-09-23 15:03:41 --> ParseError: syntax error, unexpected token "return"
+[Method: GET, Route: DashBoard/index]
+in APPPATH\Controllers\DashBoard.php on line 73.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\POS_SYSTEM\\app\\Controllers\\DashBoard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\DashBoard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\DashBoard')
+ 4 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\DashBoard')
+ 5 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('DashBoard/index')
+ 7 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-09-23 15:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-09-23 15:05:04 --> Error: Object of type CodeIgniter\Session\Session is not callable
+[Method: GET, Route: DashBoard/index]
+in APPPATH\Controllers\DashBoard.php on line 72.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-09-23 15:05:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 15:06:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 15:06:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 15:06:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 15:06:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 15:06:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 15:06:25 --> session username value:'jackbanda'
+DEBUG - 2026-09-23 15:06:25 --> Checkout committed: sale_id=190, user_id=jackbanda, item_count=1
+DEBUG - 2026-09-23 15:06:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 15:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 15:06:35 --> Payment session check: sale_id=190, status=PENDING, total=25
+DEBUG - 2026-09-23 15:06:35 --> Fetched payment_status: 'SUCCESS'
+DEBUG - 2026-09-23 15:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 15:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 15:16:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 15:16:52 --> First sale row: []
+DEBUG - 2026-09-23 15:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 15:18:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 15:18:06 --> First sale row: []
+DEBUG - 2026-09-23 16:10:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 16:10:20 --> First sale row: []
+DEBUG - 2026-09-23 16:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 16:14:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 16:14:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 16:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 16:15:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 16:16:58 --> SELECT `sale`.`sale_id`, `sale`.`sale_date`, `user`.`username` AS `username`, COUNT(sale_item.sale_item_id) AS items_count, `sale`.`total_amount`, `sale`.`status`
+FROM `sale`
+LEFT JOIN `sale_item` ON `sale`.`sale_id` = `sale_item`.`sale_id`
+LEFT JOIN `user` ON `sale`.`handled_by_user` = `user`.`user_id`
+WHERE `sale`.`status` IN ('CANCELED','CANCELLED')
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 50
+DEBUG - 2026-09-23 16:16:58 --> Sales status result: requested=CANCELED, count=15, ids=142,147,149,154,167,127,5,83,73,59,49,41,31,21,11
+DEBUG - 2026-09-23 16:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 16:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 16:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 16:20:08 --> First sale row: []
+DEBUG - 2026-09-23 19:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-09-23 20:05:25 --> Error: Undefined constant App\Controllers\AuthController::name
+[Method: GET, Route: userlogin]
+in APPPATH\Controllers\BaseController.php on line 62.
+ 1 APPPATH\Controllers\AuthController.php(10): App\Controllers\BaseController->trace('loginpage', 'ENTER | render login form')
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->loginpage()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-09-23 20:07:13 --> [Cron:checkPaymentTransactionPending] ENTER | cron job for stale PENDING payments
+ERROR - 2026-09-23 20:07:19 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\POS_SYSTEM\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\POS_SYSTEM\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\POS_SYSTEM\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\POS_SYSTEM\app\Controllers\Cron.php(31): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(974): App\Controllers\Cron->checkPaymentTransactionPending()
+#8 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cron))
+#9 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\POS_SYSTEM\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\POS_SYSTEM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\POS_SYSTEM\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\POS_SYSTEM\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\POS_SYSTEM\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\POS_SYSTEM\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\POS_SYSTEM\app\Controllers\Cron.php(31): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(974): App\Controllers\Cron->checkPaymentTransactionPending()
+#7 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cron))
+#8 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\POS_SYSTEM\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\POS_SYSTEM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\POS_SYSTEM\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-09-23 20:07:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: CLI, Route: cron/checkPayments]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `paymenttransactions`
+WHERE `transaction_status` = :transaction_status:
+ORDER BY `created_at` DESC
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Cron.php(31): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cron->checkPaymentTransactionPending()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cron))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-09-23 20:07:22 --> [AuthController:loginpage] ENTER | render login form
+DEBUG - 2026-09-23 20:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 20:07:23 --> [ProductController:showProducts] ENTER | products page
+ERROR - 2026-09-23 20:07:27 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\POS_SYSTEM\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\laragon\www\POS_SYSTEM\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\POS_SYSTEM\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\POS_SYSTEM\app\Models\ProductModel.php(79): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\POS_SYSTEM\app\Controllers\ProductController.php(19): App\Models\ProductModel->getProductsWithCategory(50)
+#8 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(974): App\Controllers\ProductController->showProducts()
+#9 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\POS_SYSTEM\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\POS_SYSTEM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\POS_SYSTEM\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\POS_SYSTEM\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#3 C:\laragon\www\POS_SYSTEM\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\POS_SYSTEM\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\POS_SYSTEM\app\Models\ProductModel.php(79): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\POS_SYSTEM\app\Controllers\ProductController.php(19): App\Models\ProductModel->getProductsWithCategory(50)
+#7 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(974): App\Controllers\ProductController->showProducts()
+#8 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\POS_SYSTEM\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\POS_SYSTEM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\POS_SYSTEM\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-09-23 20:07:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: productcontroller]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`barcode`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+ORDER BY `product`.`product_name` ASC
+ LIMIT 50', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\ProductModel.php(79): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\ProductController.php(19): App\Models\ProductModel->getProductsWithCategory(50)
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ProductController->showProducts()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-09-23 20:08:28 --> [Cron:checkPaymentTransactionPending] ENTER | cron job for stale PENDING payments
+ERROR - 2026-09-23 20:08:32 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\POS_SYSTEM\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\POS_SYSTEM\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\POS_SYSTEM\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\POS_SYSTEM\app\Controllers\Cron.php(31): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(974): App\Controllers\Cron->checkPaymentTransactionPending()
+#8 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cron))
+#9 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\POS_SYSTEM\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\POS_SYSTEM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\POS_SYSTEM\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\POS_SYSTEM\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\POS_SYSTEM\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\POS_SYSTEM\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\POS_SYSTEM\app\Controllers\Cron.php(31): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(974): App\Controllers\Cron->checkPaymentTransactionPending()
+#7 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cron))
+#8 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\POS_SYSTEM\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\POS_SYSTEM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\POS_SYSTEM\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-09-23 20:08:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: CLI, Route: cron/checkPayments]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `paymenttransactions`
+WHERE `transaction_status` = :transaction_status:
+ORDER BY `created_at` DESC
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Cron.php(31): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Cron->checkPaymentTransactionPending()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cron))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-09-23 20:08:36 --> [AuthController:loginpage] ENTER | render login form
+DEBUG - 2026-09-23 20:08:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 20:08:36 --> [ProductController:showProducts] ENTER | products page
+ERROR - 2026-09-23 20:08:40 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\POS_SYSTEM\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\laragon\www\POS_SYSTEM\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\POS_SYSTEM\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\POS_SYSTEM\app\Models\ProductModel.php(79): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\POS_SYSTEM\app\Controllers\ProductController.php(19): App\Models\ProductModel->getProductsWithCategory(50)
+#8 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(974): App\Controllers\ProductController->showProducts()
+#9 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#10 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\POS_SYSTEM\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\POS_SYSTEM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\POS_SYSTEM\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\POS_SYSTEM\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#3 C:\laragon\www\POS_SYSTEM\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\POS_SYSTEM\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\POS_SYSTEM\app\Models\ProductModel.php(79): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\POS_SYSTEM\app\Controllers\ProductController.php(19): App\Models\ProductModel->getProductsWithCategory(50)
+#7 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(974): App\Controllers\ProductController->showProducts()
+#8 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#9 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\POS_SYSTEM\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\POS_SYSTEM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\POS_SYSTEM\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-09-23 20:08:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: productcontroller]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`barcode`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+ORDER BY `product`.`product_name` ASC
+ LIMIT 50', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\ProductModel.php(79): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\ProductController.php(19): App\Models\ProductModel->getProductsWithCategory(50)
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ProductController->showProducts()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-09-23 20:17:34 --> [AuthController:loginpage] ENTER | render login form
+DEBUG - 2026-09-23 20:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 20:17:41 --> [AuthController:userlogin] ENTER | login attempt
+DEBUG - 2026-09-23 20:17:41 --> [AuthController:userlogin] USER LOOKUP | username=jackbanda found=yes
+DEBUG - 2026-09-23 20:17:41 --> [AuthController:userlogin] CREDENTIALS OK | password verified
+DEBUG - 2026-09-23 20:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 20:17:41 --> [AuthController:userlogin] SESSION ESTABLISHED | user=jackbanda role=cashier
+DEBUG - 2026-09-23 20:17:41 --> [AuthController:userlogin] EXIT -> redirect DashBoard/index
+DEBUG - 2026-09-23 20:17:41 --> [DashBoard:index] ENTER | dashboard
+DEBUG - 2026-09-23 20:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 20:17:41 --> First sale row: []
+DEBUG - 2026-09-23 20:17:41 --> [DashBoard:index] EXIT -> render Dashboard/index | today_sales=95 open=18 products=88
+DEBUG - 2026-09-23 20:21:05 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-23 20:21:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 20:22:02 --> [NewSalesController:addToCart] ENTER | add item to cart
+DEBUG - 2026-09-23 20:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 20:22:03 --> [NewSalesController:addToCart] PRODUCT LOOKUP | product_id=48 found=yes
+DEBUG - 2026-09-23 20:22:03 --> [NewSalesController:addToCart] CART SAVED | items=1 total=45 added_qty=1
+DEBUG - 2026-09-23 20:22:03 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-23 20:22:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 20:22:05 --> [NewSalesController:updateQuantity] ENTER | adjust item quantity
+DEBUG - 2026-09-23 20:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 20:22:05 --> [NewSalesController:updateQuantity] CART UPDATED | items=1 total=90
+DEBUG - 2026-09-23 20:22:06 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-23 20:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 20:22:08 --> [NewSalesController:checkout] ENTER | start sale checkout
+DEBUG - 2026-09-23 20:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 20:22:08 --> [NewSalesController:checkout] SALE INSERTED | sale_id=191 total=90
+DEBUG - 2026-09-23 20:22:08 --> session username value:'jackbanda'
+DEBUG - 2026-09-23 20:22:08 --> Checkout committed: sale_id=191, user_id=jackbanda, item_count=1
+DEBUG - 2026-09-23 20:22:08 --> [NewSalesController:checkout] LOCK SET | sale_id=191 -> awaiting payment confirm
+DEBUG - 2026-09-23 20:22:08 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-23 20:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 20:22:16 --> [NewSalesController:processPayment] ENTER | payment processing begins
+DEBUG - 2026-09-23 20:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 20:22:16 --> Payment session check: sale_id=191, status=PENDING, total=90
+DEBUG - 2026-09-23 20:22:16 --> [NewSalesController:processPayment] DISPATCH | transaction_id=79 status=SUCCESS
+DEBUG - 2026-09-23 20:22:16 --> [NewSalesController:completePayment] ENTER | payment success
+DEBUG - 2026-09-23 20:22:16 --> [NewSalesController:completePayment] TRANSACTION VALID | sale_id=191 txn=79 method=mobileMoney status=SUCCESS
+DEBUG - 2026-09-23 20:22:16 --> Fetched payment_status: 'SUCCESS'
+DEBUG - 2026-09-23 20:22:16 --> [NewSalesController:completePayment] PAYMENT RECORDED + SALE MARKED PAID | sale_id=191 method=mobileMoney status=SUCCESS
+DEBUG - 2026-09-23 20:22:16 --> [NewSalesController:completePayment] STOCK DECREMENTED | product=48 qty=2
+DEBUG - 2026-09-23 20:22:16 --> [NewSalesController:completePayment] EXIT -> receipt | sale_id=191 session cleared
+DEBUG - 2026-09-23 20:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-23 20:22:16 --> [NewSalesController:showReceipt] ENTER | sale_id=191
+DEBUG - 2026-09-23 20:22:16 --> [NewSalesController:showReceipt] EXIT -> render receipt | sale_id=191 total=90

@@ -7,10 +7,13 @@ use  App\Models\UserModel;
 
 class AuthController extends BaseController{
     public function loginpage():string{
+    $this->trace('loginpage', 'ENTER | render login form');
     return view('auth/login');
     }
 
     public function userlogin(){
+
+        $this->trace('userlogin', 'ENTER | login attempt');
 
         $username=trim($this->request->getPost('username'));
         $username=preg_replace('/\s+/','',$username);
@@ -23,6 +26,7 @@ class AuthController extends BaseController{
         ];
 
         if(!$this->validate($rules)){
+        $this->trace('userlogin', 'VALIDATION FAILED | username/password required');
         return view('auth/login',[
             'validate'=>$this->validator]);
         }
@@ -32,8 +36,14 @@ class AuthController extends BaseController{
 
         $user = $model->where('username', $username)->first();
 
+        $this->trace('userlogin', 'USER LOOKUP | username={username} found={found}', [
+            'username' => $username,
+            'found'    => $user !== null ? 'yes' : 'no',
+        ]);
+
         
         if ($user && password_verify($password, $user['password'])) {
+            $this->trace('userlogin', 'CREDENTIALS OK | password verified');
             session()->set([
                 'user_id'=>$user['user_id'],
                 'username'=>$user['username'],
@@ -48,13 +58,19 @@ class AuthController extends BaseController{
 
             $role=session()->get('role');
 
+            $this->trace('userlogin', 'SESSION ESTABLISHED | user={user} role={role}', [
+                'user' => $user['username'],
+                'role' => $role,
+            ]);
+
             if($role=='cashier'){
+            $this->trace('userlogin', 'EXIT -> redirect DashBoard/index');
             return redirect()->to('DashBoard/index')->with('success', "Welcome ".$user['username']);
             }
-            //return view('dashboard/index')
-            //return ;
+            
         } 
         else {
+            $this->trace('userlogin', 'CREDENTIALS INVALID | password mismatch or user missing');
             return redirect()->to('userlogin')->with('message', 'Invalid credentials');}
 
 
@@ -68,7 +84,9 @@ class AuthController extends BaseController{
 
     public function logout(){
 
+        $this->trace('logout', 'ENTER | user logging out');
         session()->destroy();
+        $this->trace('logout', 'SESSION DESTROYED | redirect to login');
         return redirect()->to('userlogin')->with('success', 'logout successfull');
 
     }

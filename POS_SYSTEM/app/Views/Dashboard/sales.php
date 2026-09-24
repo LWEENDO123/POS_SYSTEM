@@ -303,20 +303,12 @@
     }
     
   </style>
-</head>
+<?= view('Dashboard/_theme') ?>
+  </head>
 <body>
   <div class="Main">
     <div id="box1" class="box1">
-<div class="nav">
-        <nav>
-          <a href="<?= base_url('DashBoard/index') ?>">Dashboard</a>
-          <a href="<?= base_url('newsales') ?>">New Sale</a>
-          <a href="<?= base_url('sales') ?>">Sale</a>
-          <a href="<?= base_url('productcontroller') ?>">Products</a>
-          <a href="<?= base_url('customers') ?>">Customers</a>
-          <a href="<?= base_url('cashiers') ?>">Cashiers</a>
-        </nav>
-      </div>
+<?= view('Dashboard/_nav', ['active' => 'sales']) ?>
     </div>
 
     <div id="box2" class="box2">
@@ -334,9 +326,11 @@
         </form>
       </div>
 
-      <?php if (session()->getFlashdata('message')): ?>
-        <div style="background:#108b04; color:#fff; padding:8px 12px; border-radius:8px;">
-          <?= esc(session()->getFlashdata('message')) ?>
+      <?= view('partials/_flash_messages') ?>
+
+      <?php if (!empty($message)): ?>
+        <div style="background:#fff3cd; color:#664d03; padding:8px 12px; border-radius:8px;">
+          <?= esc($message) ?>
         </div>
       <?php endif; ?>
 
@@ -375,8 +369,8 @@
                 <tr>
                   <td><?= esc($sale['sale_id']) ?></td>
                   <td><?= esc($sale['sale_date']) ?></td>
-                  <td><?= esc($sale['username']) ?></td>
-                  <td><?= esc($sale['items']) ?></td>
+                  <td><?= esc($sale['username'] ?? 'Unknown') ?></td>
+                  <td><?= esc($sale['items_count'] ?? $sale['items'] ?? 0) ?></td>
                   <td><?= esc($sale['total_amount']) ?></td>
                   <td><?= esc($sale['status']) ?></td>
                   <td><button style="padding:6px 10px; border-radius:8px; border:none; background:#0A5741; color:#fff; cursor:pointer;">View</button></td>
@@ -432,26 +426,26 @@
       <label><input type="radio" name="day" value="8"> 8</label>
       <label><input type="radio" name="day" value="9"> 9</label>
       <label><input type="radio" name="day" value="10"> 10</label>
-      <label><input type="radio" name="day" value="1"> 11</label>
-      <label><input type="radio" name="day" value="2"> 12</label>
-      <label><input type="radio" name="day" value="3"> 13</label>
-      <label><input type="radio" name="day" value="4"> 14</label>
-      <label><input type="radio" name="day" value="5">15</label>
-      <label><input type="radio" name="day" value="6"> 16</label>
-      <label><input type="radio" name="day" value="7"> 17</label>
-      <label><input type="radio" name="day" value="8"> 18</label>
-      <label><input type="radio" name="day" value="9"> 19</label>
-      <label><input type="radio" name="day" value="10"> 20</label>
-      <label><input type="radio" name="day" value="1"> 21</label>
-      <label><input type="radio" name="day" value="2"> 22</label>
-      <label><input type="radio" name="day" value="3"> 23</label>
-      <label><input type="radio" name="day" value="4"> 24</label>
-      <label><input type="radio" name="day" value="5"> 25</label>
-      <label><input type="radio" name="day" value="6"> 26</label>
-      <label><input type="radio" name="day" value="7"> 27</label>
-      <label><input type="radio" name="day" value="8"> 28</label>
-      <label><input type="radio" name="day" value="9"> 29</label>
-      <label><input type="radio" name="day" value="10"> 30</label>
+      <label><input type="radio" name="day" value="11"> 11</label>
+      <label><input type="radio" name="day" value="12"> 12</label>
+      <label><input type="radio" name="day" value="13"> 13</label>
+      <label><input type="radio" name="day" value="14"> 14</label>
+      <label><input type="radio" name="day" value="15">15</label>
+      <label><input type="radio" name="day" value="16"> 16</label>
+      <label><input type="radio" name="day" value="17"> 17</label>
+      <label><input type="radio" name="day" value="18"> 18</label>
+      <label><input type="radio" name="day" value="19"> 19</label>
+      <label><input type="radio" name="day" value="20"> 20</label>
+      <label><input type="radio" name="day" value="21"> 21</label>
+      <label><input type="radio" name="day" value="22"> 22</label>
+      <label><input type="radio" name="day" value="23"> 23</label>
+      <label><input type="radio" name="day" value="24"> 24</label>
+      <label><input type="radio" name="day" value="25"> 25</label>
+      <label><input type="radio" name="day" value="26"> 26</label>
+      <label><input type="radio" name="day" value="27"> 27</label>
+      <label><input type="radio" name="day" value="28"> 28</label>
+      <label><input type="radio" name="day" value="29"> 29</label>
+      <label><input type="radio" name="day" value="30"> 30</label>
       
       <label><input type="radio" name="day" value="31"> 31</label>
     </div>

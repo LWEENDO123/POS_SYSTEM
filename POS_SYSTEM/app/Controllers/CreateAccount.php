@@ -9,12 +9,14 @@ class CreateAccount extends BaseController{
 
 
     public function user_page():string{
+        $this->trace('user_page', 'ENTER | render registration form');
         return view('useraccountpage');
     
        
     }
 
     public function user_registration(){
+        $this->trace('user_registration', 'ENTER | new account submission');
         $rules=[
             'firstname'=>'required',
             'lastname'=>'required',
@@ -44,6 +46,7 @@ class CreateAccount extends BaseController{
 
 
         if(!$this->validate($rules)){
+            $this->trace('user_registration', 'VALIDATION FAILED | required fields missing');
             return view('useraccountpage',[
             'validate'=>$this->validator]);
         }
@@ -52,6 +55,7 @@ class CreateAccount extends BaseController{
         $model=new  UserModel();
         
         if($model->where('email',$email)->first()){
+        $this->trace('user_registration', 'DUPLICATE EMAIL | email={email}', ['email' => $email]);
 
         return redirect()->back()
                          ->withInput()
@@ -60,6 +64,11 @@ class CreateAccount extends BaseController{
         }
        
 
+
+        $this->trace('user_registration', 'INSERTING USER | username={username} email={email}', [
+            'username' => $username,
+            'email'    => $email,
+        ]);
 
         if($model->insert([
             
@@ -72,10 +81,12 @@ class CreateAccount extends BaseController{
             'email'=>$email,
             'phone'=>$phone
         ])){
+         $this->trace('user_registration', 'EXIT -> redirect userlogin | account created');
          return redirect()->to('userlogin')->with("success","user Account created");
         
         }
         else{
+            $this->trace('user_registration', 'INSERT FAILED | see model errors()');
             return redirect()->back()->with('error','failed to submit form')->withInput(); 
 
         }

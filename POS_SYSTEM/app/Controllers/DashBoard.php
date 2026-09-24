@@ -5,7 +5,6 @@ namespace App\Controllers;
 
 use App\Models\CartModel;
 use App\Models\CategoryModel;
-use App\Models\CustomerModel;
 use App\Models\ProductModel;
 use App\Models\SaleItemModel;
 use App\Models\SaleModel;
@@ -15,7 +14,10 @@ class DashBoard extends BaseController
 {
     public function index()
     {
+        $this->trace('index', 'ENTER | dashboard');
+
         if (! session()->get('logged_in')) {
+            $this->trace('index', 'AUTH BLOCKED | no session -> redirect userlogin');
             return redirect()->to('userlogin')
                              ->with('message', 'Session expired or invalid.');
         }
@@ -56,13 +58,10 @@ class DashBoard extends BaseController
             ->orderBy('stock_quantity', 'ASC')
             ->findAll();
 
-        $lowStockCount = count($lowStock);
+$lowStockCount = count($lowStock);
 
         $categoryModel = new CategoryModel();
         $categoriesCount = $categoryModel->countAllResults();
-
-        $customerModel = new CustomerModel();
-        $customersCount = $customerModel->countAllResults();
 
         $summary = [
             'today_sales' => $todayRevenue['total_amount'] ?? 0,
@@ -70,12 +69,19 @@ class DashBoard extends BaseController
             'open_tickets' => $openTickets,
             'low_stock_count' => $lowStockCount,
             'products_count' => $productsCount,
-            'categories_count' => $categoriesCount,
-            'customers_count' => $customersCount
+            'categories_count' => $categoriesCount
         ];
+        $session=session();
+        $User=session()->get('username');
+
+        $this->trace('index', 'EXIT -> render Dashboard/index | today_sales={s} open={o} products={p}', [
+            's' => $summary['today_sales'],
+            'o' => $summary['open_tickets'],
+            'p' => $summary['products_count'],
+        ]);
 
         return view('Dashboard/index', [
-            'user' => $user,
+            'user' => $User,
             'summary' => $summary,
             'recent_sales' => $recent_sales,
             'low_stock' => $lowStock

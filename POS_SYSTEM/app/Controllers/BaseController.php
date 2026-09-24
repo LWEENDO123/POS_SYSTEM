@@ -38,8 +38,36 @@ abstract class BaseController extends Controller
 
         // Caution: Do not edit this line.
         parent::initController($request, $response, $logger);
+    }
 
-        // Preload any models, libraries, etc, here.
-        // $this->session = service('session');
+    /**
+     * Coding-flow trace.
+     * -------------------------------------------------------------------
+     * Writes a consistent, readable line to the application log so the whole
+     * request story can be followed like a book, e.g.:
+     *
+     *   DEBUG --> [NewSalesController:checkout] ENTER | user=jackbanda cart_count=3
+     *   DEBUG --> [NewSalesController:checkout] SALE CREATED | sale_id=182 status=PENDING
+     *   DEBUG --> [NewSalesController:checkout] EXIT -> redirect newsales/payment
+     *
+     * Every public action should at least call trace() at ENTER and before
+     * every EXIT (redirect/view/return) so the flow is fully legible.
+     *
+     * @param string     $method   name of the controller method running
+     * @param string     $details  human-readable stage + key context
+     * @param ?array     $context  optional {key} placeholders for log_message
+     */
+    protected function trace(string $method, string $details = '', ?array $context = null): void
+    {
+        // static::class -> FQCN e.g. "App\Controllers\NewSalesController".
+        // Strip the namespace so the log line stays short and readable.
+        $controller = static::class;
+        $lastSlash  = strrchr($controller, '\\');
+
+        if ($lastSlash !== false) {
+            $controller = substr($lastSlash, 1);
+        }
+
+        log_message('debug', '[' . $controller . ':' . $method . '] ' . $details, $context ?? []);
     }
 }

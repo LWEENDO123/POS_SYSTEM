@@ -101,17 +101,7 @@
 
         <!-- Subtext -->
         <p class="ptag">Sign in with your cashier account to open the till.</p>
-        <?php if (session()->getFlashdata('success')): ?>
-            <div class="alert_success">
-                <?= esc(session()->getFlashdata('success')) ?>
-            </div>
-            <?php endif; ?>
-
-        <?php if (session()->getFlashdata('message')): ?>
-        <div class="alert_danger">
-            <?= esc(session()->getFlashdata('message')) ?>
-        </div>
-        <?php endif; ?>
+        <?= view('partials/_flash_messages') ?>
 
         <!-- Login form -->
         <form action="<?= site_url('userlogin')?>" method="post">

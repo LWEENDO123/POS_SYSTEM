@@ -165,25 +165,18 @@
       background-color: #dc2626;
     }
   </style>
-</head>
+<?= view('Dashboard/_theme') ?>
+  </head>
 <body>
   <div class="main">
     <!-- Sidebar -->
     <div id="sidebar" class="box1">
-      <div class="nav">
-        <nav>
-          <a href="#">Dashboard</a>
-          <a href="#">New Sale</a>
-          <a href="#">Sale</a>
-          <a href="#">Products</a>
-          <a href="#">Customers</a>
-          <a href="#">Cashiers</a>
-        </nav>
-      </div>
+      <?= view('Dashboard/_nav', ['active' => 'products']) ?>
     </div>
 
     <!-- Main content -->
     <div id="maintable" class="box2">
+      <?= view('partials/_flash_messages') ?>
       <!-- Search section -->
       <div class="search">
         <div class="searchbar">
@@ -232,7 +225,7 @@
           <tr>
             <td><?= esc($product['product_name']) ?></td>
             <td><?= esc($product['category_name']) ?></td>
-            <td><?= esc($product['barcode']) ?></td>
+            <td><?= esc($product['barcode'] ?? 'Not provided') ?></td>
             <td><?= esc($product['price']) ?></td>
             <td><?= esc($product['stock_quantity']) ?></td>
           </tr>

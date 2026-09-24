@@ -4,24 +4,33 @@ namespace App\Controllers;
 
 use App\Models\CategoryModel;
 use App\Models\ProductModel;
-use CodeIgniter\Model;
 
-Class Productcontroller extends BaseController{
+class ProductController extends BaseController{
 
-public function Products() {
-    return view('products/product');
+public function showProducts() {
+    $this->trace('showProducts', 'ENTER | products page');
+ 
+    $productModel = new ProductModel();
+    $products = $productModel->getProductsWithCategory(50);
 
+    $this->trace('showProducts', 'EXIT -> render Products | count={count}', ['count' => count($products)]);
+    return view('Dashboard/Products', ['products' => $products]);
 }
-public function search_product(){
-    $model=new ProductModel();
-    $search=$this->request->getGet('search');
 
-   $get_products=$model
+public function searchProducts(){
+    $productModel = new ProductModel();
+
+    $searchTerm = $this->request->getGet('search');
+
+
+    $this->trace('searchProducts', 'ENTER | search={search}', ['search' => $searchTerm ?: '']);
+
+   $productQuery = $productModel
                 ->select('
                 product.product_name,
                 category.category_name,
                 product.barcode,
-                sale.price,
+                product.price,
                 product.stock_quantity
                 ')
                 ->join(
@@ -29,49 +38,63 @@ public function search_product(){
                     'product.category_id=category.category_id'
 
                 )
-                ->groupBy('product_name')
-                ->orderBy('created_at','DESC')
+                ->orderBy('product.created_at','DESC')
                 ->limit(50);
 
-    if($search){
-        $get_products->like('product_name',$search);
+    if(!empty($searchTerm)){
+
+        $productQuery->like('product.product_name', $searchTerm);
+        log_message('debug','output found after condition: '.$searchTerm);
     }
-    if(empty($get_products)){
-        return redirect()->to('product/products')->with('message','product not found');
+
+    else{
+        $this->trace('searchProducts', 'EXIT -> redirect productcontroller | no search term');
+        return redirect()->to('productcontroller')->with('message','product not found');
     }
-    return view('product/products',['products'=>$get_products]);
+    $products = $productQuery->findAll();
+
+    log_message('debug','products found(Ray debugging): '.count($products));
+    log_message('debug','first product(Ray debugging): '.json_encode($products[0]??[]));
+
+    $this->trace('searchProducts', 'EXIT -> render Products | count={count}', ['count' => count($products)]);
+    return view('Dashboard/Products', ['products' => $products]);
 
 
 
 } 
-public function categories_navbar(){
-    $category_model=new CategoryModel();
-    $category_name=$this->request->getGet('category');
+public function filterByCategory(){
+    $categoryModel = new CategoryModel();
+    $categoryName = $this->request->getGet('category');
 
-    $category_query=$category_model
+    $this->trace('filterByCategory', 'ENTER | category={category}', ['category' => $categoryName ?: 'ALL']);
+
+    $categoryQuery = $categoryModel
                 ->select('
                 product.product_name,
                 category.category_name,
                 product.price,
-                product.stock
+                product.stock_quantity,
+                product.barcode
+                
 
                 ')
                 ->join(
                     'product',
                     'product.category_id=category.category_id'
                 )
-                
-                ->groupBy('product_name')
-                ->orderBy('created_at','DESC')
-                ->limit(50);
-
-    if($category_name !== 'ALL'){
-        $category_query->where('category_name',$category_name);
+                ->orderBy('product.created_at','DESC')
+                ;
+    if($categoryName !== 'ALL'){
+        $categoryQuery->like('category.category_name', $categoryName);
     }
 
-    $results = $category_query->findAll();
+    $products = $categoryQuery->findAll();
 
-    return view('product/products', ['products' => $results]);
+    $this->trace('filterByCategory', 'EXIT -> render Products | category={category} count={count}', [
+        'category' => $categoryName ?: 'ALL',
+        'count'    => count($products),
+    ]);
+    return view('Dashboard/Products', ['products' => $products]);
 }
 
 
