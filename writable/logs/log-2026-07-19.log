@@ -1,0 +1,312 @@
+DEBUG - 2026-07-19 19:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-19 19:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-19 19:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-19 19:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-19 19:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-19 19:39:33 --> Unknown column 'category.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `product`.*, `category`.`name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < 10
+ORDER BY `stock_quantity` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product`.*, `category`.`name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < 10
+ORDER BY `stock_quantity` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product`.*, `category`.`name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < 10
+ORDER BY `stock_quantity` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.*, `category`.`name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < :stock_quantity:
+ORDER BY `stock_quantity` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\DashBoard.php(120): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-19 19:39:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'category.name' in 'field list'
+[Method: GET, Route: DashBoard/index]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.*, `category`.`name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < :stock_quantity:
+ORDER BY `stock_quantity` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\DashBoard.php(120): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-19 19:39:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'category.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product`.*, `category`.`name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < 10
+ORDER BY `stock_quantity` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product`.*, `category`.`name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < 10
+ORDER BY `stock_quantity` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.*, `category`.`name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < :stock_quantity:
+ORDER BY `stock_quantity` ASC', [...], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\DashBoard.php(120): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-19 19:39:33 --> [Caused by] mysqli_sql_exception: Unknown column 'category.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `product`.*, `category`.`name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < 10
+ORDER BY `stock_quantity` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product`.*, `category`.`name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < 10
+ORDER BY `stock_quantity` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product`.*, `category`.`name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < 10
+ORDER BY `stock_quantity` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.*, `category`.`name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < :stock_quantity:
+ORDER BY `stock_quantity` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\DashBoard.php(120): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-19 19:41:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-19 19:41:44 --> Unknown column 'category.category_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `product`.*, `category`.`category_name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < 10
+ORDER BY `stock_quantity` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product`.*, `category`.`category_name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < 10
+ORDER BY `stock_quantity` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product`.*, `category`.`category_name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < 10
+ORDER BY `stock_quantity` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.*, `category`.`category_name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < :stock_quantity:
+ORDER BY `stock_quantity` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\DashBoard.php(120): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-19 19:41:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'category.category_id' in 'on clause'
+[Method: GET, Route: DashBoard/index]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.*, `category`.`category_name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < :stock_quantity:
+ORDER BY `stock_quantity` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\DashBoard.php(120): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-19 19:41:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'category.category_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product`.*, `category`.`category_name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < 10
+ORDER BY `stock_quantity` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product`.*, `category`.`category_name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < 10
+ORDER BY `stock_quantity` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.*, `category`.`category_name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < :stock_quantity:
+ORDER BY `stock_quantity` ASC', [...], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\DashBoard.php(120): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-19 19:41:44 --> [Caused by] mysqli_sql_exception: Unknown column 'category.category_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `product`.*, `category`.`category_name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < 10
+ORDER BY `stock_quantity` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product`.*, `category`.`category_name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < 10
+ORDER BY `stock_quantity` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product`.*, `category`.`category_name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < 10
+ORDER BY `stock_quantity` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.*, `category`.`category_name` AS `category`
+FROM `product`
+LEFT JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+WHERE `stock_quantity` < :stock_quantity:
+ORDER BY `stock_quantity` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\DashBoard.php(120): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-19 19:43:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 19:43:15 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: DashBoard/index]
+in APPPATH\Views\Dashboard\index.php on line 220.
+ 1 APPPATH\Views\Dashboard\index.php(220): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php', 220)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('Dashboard/index', [], true)
+ 5 APPPATH\Controllers\DashBoard.php(158): view('Dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-19 19:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 19:44:05 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: DashBoard/index]
+in APPPATH\Views\Dashboard\index.php on line 220.
+ 1 APPPATH\Views\Dashboard\index.php(220): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php', 220)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('Dashboard/index', [], true)
+ 5 APPPATH\Controllers\DashBoard.php(158): view('Dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-19 19:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-19 20:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-19 20:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-19 20:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-19 20:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 20:41:03 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: DashBoard/index]
+in APPPATH\Views\Dashboard\index.php on line 201.
+ 1 APPPATH\Views\Dashboard\index.php(201): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php', 201)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('Dashboard/index', [], true)
+ 5 APPPATH\Controllers\DashBoard.php(160): view('Dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-19 20:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 20:42:10 --> ErrorException: Undefined array key "stock_quantity"
+[Method: GET, Route: DashBoard/index]
+in APPPATH\Views\Dashboard\index.php on line 221.
+ 1 APPPATH\Views\Dashboard\index.php(221): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stock_quantity"', 'C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php', 221)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('Dashboard/index', [], true)
+ 5 APPPATH\Controllers\DashBoard.php(160): view('Dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-19 20:43:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-19 20:43:54 --> ErrorException: Undefined array key "stock_quantity"
+[Method: GET, Route: DashBoard/index]
+in APPPATH\Views\Dashboard\index.php on line 221.
+ 1 APPPATH\Views\Dashboard\index.php(221): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stock_quantity"', 'C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php', 221)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('Dashboard/index', [], true)
+ 5 APPPATH\Controllers\DashBoard.php(160): view('Dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-19 20:51:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-19 21:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-19 21:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-19 22:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

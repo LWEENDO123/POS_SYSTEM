@@ -1,0 +1,22 @@
+DEBUG - 2026-07-16 23:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 23:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 23:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 23:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 23:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 23:15:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 23:22:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-16 23:22:14 --> ErrorException: Undefined array key "category"
+[Method: GET, Route: DashBoard/index]
+in APPPATH\Views\Dashboard\index.php on line 220.
+ 1 APPPATH\Views\Dashboard\index.php(220): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "category"', 'C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php', 220)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\POS_SYSTEM\\app\\Views\\Dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('Dashboard/index', [], true)
+ 5 APPPATH\Controllers\DashBoard.php(42): view('Dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashBoard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashBoard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')

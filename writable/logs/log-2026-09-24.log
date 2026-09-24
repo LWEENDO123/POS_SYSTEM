@@ -1,0 +1,304 @@
+DEBUG - 2026-09-24 06:05:39 --> [AuthController:loginpage] ENTER | render login form
+DEBUG - 2026-09-24 06:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:05:53 --> [AuthController:userlogin] ENTER | login attempt
+DEBUG - 2026-09-24 06:05:55 --> [AuthController:userlogin] USER LOOKUP | username=jackbanda found=yes
+DEBUG - 2026-09-24 06:05:55 --> [AuthController:userlogin] CREDENTIALS OK | password verified
+DEBUG - 2026-09-24 06:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:05:55 --> [AuthController:userlogin] SESSION ESTABLISHED | user=jackbanda role=cashier
+DEBUG - 2026-09-24 06:05:55 --> [AuthController:userlogin] EXIT -> redirect DashBoard/index
+DEBUG - 2026-09-24 06:05:56 --> [DashBoard:index] ENTER | dashboard
+DEBUG - 2026-09-24 06:05:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:05:56 --> First sale row: []
+DEBUG - 2026-09-24 06:05:56 --> [DashBoard:index] EXIT -> render Dashboard/index | today_sales=0 open=18 products=88
+DEBUG - 2026-09-24 06:06:12 --> [DashBoard:index] ENTER | dashboard
+DEBUG - 2026-09-24 06:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:06:12 --> First sale row: []
+DEBUG - 2026-09-24 06:06:12 --> [DashBoard:index] EXIT -> render Dashboard/index | today_sales=0 open=18 products=88
+DEBUG - 2026-09-24 06:08:47 --> [DashBoard:index] ENTER | dashboard
+DEBUG - 2026-09-24 06:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:08:47 --> First sale row: []
+DEBUG - 2026-09-24 06:08:47 --> [DashBoard:index] EXIT -> render Dashboard/index | today_sales=0 open=18 products=88
+DEBUG - 2026-09-24 06:08:50 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 06:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:08:53 --> [Sales:saleshomepage] ENTER | sales history page
+DEBUG - 2026-09-24 06:08:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:08:53 --> [Sales:saleshomepage] EXIT -> render Dashboard/sales | count=50
+DEBUG - 2026-09-24 06:08:55 --> [ProductController:showProducts] ENTER | products page
+DEBUG - 2026-09-24 06:08:55 --> [ProductController:showProducts] EXIT -> render Products | count=50
+DEBUG - 2026-09-24 06:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:08:57 --> [Receipt:index] ENTER | receipts list page
+DEBUG - 2026-09-24 06:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:08:57 --> [Receipt:index] EXIT -> render Dashboard/receipt | count=50
+DEBUG - 2026-09-24 06:09:00 --> [DashBoard:index] ENTER | dashboard
+DEBUG - 2026-09-24 06:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:09:00 --> First sale row: []
+DEBUG - 2026-09-24 06:09:00 --> [DashBoard:index] EXIT -> render Dashboard/index | today_sales=0 open=18 products=88
+DEBUG - 2026-09-24 06:10:27 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 06:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:10:31 --> [ProductController:showProducts] ENTER | products page
+DEBUG - 2026-09-24 06:10:31 --> [ProductController:showProducts] EXIT -> render Products | count=50
+DEBUG - 2026-09-24 06:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:10:33 --> [Sales:saleshomepage] ENTER | sales history page
+DEBUG - 2026-09-24 06:10:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:10:33 --> [Sales:saleshomepage] EXIT -> render Dashboard/sales | count=50
+DEBUG - 2026-09-24 06:15:37 --> [DashBoard:index] ENTER | dashboard
+DEBUG - 2026-09-24 06:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:15:37 --> First sale row: []
+DEBUG - 2026-09-24 06:15:37 --> [DashBoard:index] EXIT -> render Dashboard/index | today_sales=0 open=18 products=88
+DEBUG - 2026-09-24 06:15:39 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 06:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:15:40 --> [NewSalesController:addToCart] ENTER | add item to cart
+DEBUG - 2026-09-24 06:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:15:41 --> [NewSalesController:addToCart] PRODUCT LOOKUP | product_id=60 found=yes
+DEBUG - 2026-09-24 06:15:41 --> [NewSalesController:addToCart] CART SAVED | items=1 total=32 added_qty=1
+DEBUG - 2026-09-24 06:15:41 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 06:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:15:43 --> [NewSalesController:checkout] ENTER | start sale checkout
+DEBUG - 2026-09-24 06:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:15:43 --> [NewSalesController:checkout] SALE INSERTED | sale_id=192 total=32
+DEBUG - 2026-09-24 06:15:43 --> session username value:'jackbanda'
+DEBUG - 2026-09-24 06:15:43 --> Checkout committed: sale_id=192, user_id=jackbanda, item_count=1
+DEBUG - 2026-09-24 06:15:43 --> [NewSalesController:checkout] LOCK SET | sale_id=192 -> awaiting payment confirm
+DEBUG - 2026-09-24 06:15:43 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 06:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:15:51 --> [NewSalesController:processPayment] ENTER | payment processing begins
+DEBUG - 2026-09-24 06:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:15:51 --> Payment session check: sale_id=192, status=PENDING, total=32
+DEBUG - 2026-09-24 06:15:51 --> [NewSalesController:processPayment] DISPATCH | transaction_id=80 status=FAILED
+DEBUG - 2026-09-24 06:15:51 --> [NewSalesController:failPayment] ENTER | payment failed
+DEBUG - 2026-09-24 06:15:51 --> [NewSalesController:failPayment] SALE MARKED FAILED | sale_id=192
+DEBUG - 2026-09-24 06:15:51 --> [NewSalesController:failPayment] EXIT -> newsales | lock released, cart kept for retry
+DEBUG - 2026-09-24 06:15:51 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 06:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:16:01 --> [NewSalesController:checkout] ENTER | start sale checkout
+DEBUG - 2026-09-24 06:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:16:01 --> [NewSalesController:checkout] SALE INSERTED | sale_id=193 total=32
+DEBUG - 2026-09-24 06:16:01 --> session username value:'jackbanda'
+DEBUG - 2026-09-24 06:16:01 --> Checkout committed: sale_id=193, user_id=jackbanda, item_count=1
+DEBUG - 2026-09-24 06:16:01 --> [NewSalesController:checkout] LOCK SET | sale_id=193 -> awaiting payment confirm
+DEBUG - 2026-09-24 06:16:01 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 06:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:16:12 --> [NewSalesController:processPayment] ENTER | payment processing begins
+DEBUG - 2026-09-24 06:16:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 06:16:12 --> Payment session check: sale_id=193, status=PENDING, total=32
+DEBUG - 2026-09-24 06:16:12 --> [NewSalesController:processPayment] DISPATCH | transaction_id=81 status=CANCELLED
+DEBUG - 2026-09-24 06:16:12 --> [NewSalesController:cancelPayment] ENTER | payment cancelled
+DEBUG - 2026-09-24 06:16:12 --> [NewSalesController:cancelPayment] SALE + TXN MARKED CANCELLED | sale_id=193
+DEBUG - 2026-09-24 06:16:12 --> [NewSalesController:cancelPayment] EXIT -> newsales | session cleared
+DEBUG - 2026-09-24 06:16:13 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 06:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:43:39 --> [AuthController:loginpage] ENTER | render login form
+DEBUG - 2026-09-24 08:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:43:43 --> [AuthController:userlogin] ENTER | login attempt
+DEBUG - 2026-09-24 08:43:44 --> [AuthController:userlogin] USER LOOKUP | username=jackbanda found=yes
+DEBUG - 2026-09-24 08:43:44 --> [AuthController:userlogin] CREDENTIALS OK | password verified
+DEBUG - 2026-09-24 08:43:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:43:44 --> [AuthController:userlogin] SESSION ESTABLISHED | user=jackbanda role=cashier
+DEBUG - 2026-09-24 08:43:44 --> [AuthController:userlogin] EXIT -> redirect DashBoard/index
+DEBUG - 2026-09-24 08:43:44 --> [DashBoard:index] ENTER | dashboard
+DEBUG - 2026-09-24 08:43:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:43:44 --> First sale row: []
+DEBUG - 2026-09-24 08:43:44 --> [DashBoard:index] EXIT -> render Dashboard/index | today_sales=64 open=18 products=88
+DEBUG - 2026-09-24 08:43:59 --> [Sales:saleshomepage] ENTER | sales history page
+DEBUG - 2026-09-24 08:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:43:59 --> [Sales:saleshomepage] EXIT -> render Dashboard/sales | count=50
+DEBUG - 2026-09-24 08:51:11 --> [Sales:saleshomepage] ENTER | sales history page
+DEBUG - 2026-09-24 08:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:51:11 --> [Sales:saleshomepage] EXIT -> render Dashboard/sales | count=50
+DEBUG - 2026-09-24 08:51:23 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 08:51:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:51:26 --> [DashBoard:index] ENTER | dashboard
+DEBUG - 2026-09-24 08:51:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:51:26 --> First sale row: []
+DEBUG - 2026-09-24 08:51:26 --> [DashBoard:index] EXIT -> render Dashboard/index | today_sales=64 open=18 products=88
+DEBUG - 2026-09-24 08:51:59 --> [Receipt:view_receipt] ENTER | sale_id=192
+DEBUG - 2026-09-24 08:51:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:52:00 --> [Receipt:view_receipt] RECEIPT NOT FOUND | creating one for sale_id=192
+DEBUG - 2026-09-24 08:52:00 --> [Receipt:view_receipt] EXIT -> render _receipt_card (modal fragment) | sale_id=192
+DEBUG - 2026-09-24 08:52:12 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 08:52:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:52:55 --> [DashBoard:index] ENTER | dashboard
+DEBUG - 2026-09-24 08:52:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:52:55 --> First sale row: []
+DEBUG - 2026-09-24 08:52:55 --> [DashBoard:index] EXIT -> render Dashboard/index | today_sales=64 open=18 products=88
+DEBUG - 2026-09-24 08:53:28 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 08:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:53:30 --> [NewSalesController:addToCart] ENTER | add item to cart
+DEBUG - 2026-09-24 08:53:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:53:30 --> [NewSalesController:addToCart] PRODUCT LOOKUP | product_id=67 found=yes
+DEBUG - 2026-09-24 08:53:30 --> [NewSalesController:addToCart] CART SAVED | items=1 total=25 added_qty=1
+DEBUG - 2026-09-24 08:53:30 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 08:53:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:53:32 --> [NewSalesController:updateQuantity] ENTER | adjust item quantity
+DEBUG - 2026-09-24 08:53:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:53:32 --> [NewSalesController:updateQuantity] CART UPDATED | items=1 total=50
+DEBUG - 2026-09-24 08:53:33 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 08:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:53:34 --> [NewSalesController:updateQuantity] ENTER | adjust item quantity
+DEBUG - 2026-09-24 08:53:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:53:34 --> [NewSalesController:updateQuantity] CART UPDATED | items=1 total=75
+DEBUG - 2026-09-24 08:53:34 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 08:53:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:53:35 --> [NewSalesController:updateQuantity] ENTER | adjust item quantity
+DEBUG - 2026-09-24 08:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:53:35 --> [NewSalesController:updateQuantity] CART UPDATED | items=1 total=100
+DEBUG - 2026-09-24 08:53:36 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 08:53:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:53:39 --> [NewSalesController:checkout] ENTER | start sale checkout
+DEBUG - 2026-09-24 08:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:53:39 --> [NewSalesController:checkout] SALE INSERTED | sale_id=194 total=100
+DEBUG - 2026-09-24 08:53:39 --> session username value:'jackbanda'
+DEBUG - 2026-09-24 08:53:39 --> Checkout committed: sale_id=194, user_id=jackbanda, item_count=1
+DEBUG - 2026-09-24 08:53:39 --> [NewSalesController:checkout] LOCK SET | sale_id=194 -> awaiting payment confirm
+DEBUG - 2026-09-24 08:53:39 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 08:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:53:46 --> [NewSalesController:processPayment] ENTER | payment processing begins
+DEBUG - 2026-09-24 08:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:53:46 --> Payment session check: sale_id=194, status=PENDING, total=100
+DEBUG - 2026-09-24 08:53:46 --> [NewSalesController:processPayment] DISPATCH | transaction_id=82 status=SUCCESS
+DEBUG - 2026-09-24 08:53:46 --> [NewSalesController:completePayment] ENTER | payment success
+DEBUG - 2026-09-24 08:53:46 --> [NewSalesController:completePayment] TRANSACTION VALID | sale_id=194 txn=82 method=mobileMoney status=SUCCESS
+DEBUG - 2026-09-24 08:53:46 --> Fetched payment_status: 'SUCCESS'
+DEBUG - 2026-09-24 08:53:46 --> [NewSalesController:completePayment] PAYMENT RECORDED + SALE MARKED PAID | sale_id=194 method=mobileMoney status=SUCCESS
+DEBUG - 2026-09-24 08:53:46 --> [NewSalesController:completePayment] STOCK DECREMENTED | product=67 qty=4
+DEBUG - 2026-09-24 08:53:46 --> [NewSalesController:completePayment] EXIT -> receipt | sale_id=194 session cleared
+DEBUG - 2026-09-24 08:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:53:46 --> [NewSalesController:showReceipt] ENTER | sale_id=194
+DEBUG - 2026-09-24 08:53:47 --> [NewSalesController:showReceipt] EXIT -> render receipt | sale_id=194 total=100
+DEBUG - 2026-09-24 08:53:52 --> [NewSalesController:processPayment] ENTER | payment processing begins
+DEBUG - 2026-09-24 08:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:53:52 --> Payment session check: sale_id=, status=missing, total=
+DEBUG - 2026-09-24 08:53:52 --> Payment session cleared: clear_cart=no
+DEBUG - 2026-09-24 08:53:52 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 08:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:54:29 --> [DashBoard:index] ENTER | dashboard
+DEBUG - 2026-09-24 08:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:54:29 --> First sale row: []
+DEBUG - 2026-09-24 08:54:29 --> [DashBoard:index] EXIT -> render Dashboard/index | today_sales=164 open=18 products=88
+DEBUG - 2026-09-24 08:56:26 --> [DashBoard:index] ENTER | dashboard
+DEBUG - 2026-09-24 08:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:56:26 --> First sale row: []
+DEBUG - 2026-09-24 08:56:26 --> [DashBoard:index] EXIT -> render Dashboard/index | today_sales=164 open=18 products=88
+DEBUG - 2026-09-24 08:56:34 --> [Receipt:view_receipt] ENTER | sale_id=194
+DEBUG - 2026-09-24 08:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:56:34 --> [Receipt:view_receipt] EXIT -> render _receipt_card (modal fragment) | sale_id=194
+DEBUG - 2026-09-24 08:56:37 --> [Receipt:view_receipt] ENTER | sale_id=194
+DEBUG - 2026-09-24 08:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 08:56:37 --> [Receipt:view_receipt] EXIT -> render _receipt_card (modal fragment) | sale_id=194
+DEBUG - 2026-09-24 09:02:50 --> [DashBoard:index] ENTER | dashboard
+DEBUG - 2026-09-24 09:02:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:02:50 --> First sale row: []
+DEBUG - 2026-09-24 09:02:51 --> [DashBoard:index] EXIT -> render Dashboard/index | today_sales=164 open=18 products=88
+DEBUG - 2026-09-24 09:08:34 --> [DashBoard:index] ENTER | dashboard
+DEBUG - 2026-09-24 09:08:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:08:34 --> First sale row: []
+DEBUG - 2026-09-24 09:08:34 --> [DashBoard:index] EXIT -> render Dashboard/index | today_sales=164 open=18 products=88
+DEBUG - 2026-09-24 09:19:50 --> [Sales:search] ENTER | search=194
+DEBUG - 2026-09-24 09:19:50 --> SELECT `sale`.`sale_id`, `sale`.`sale_date`, `user`.`username` AS `username`, SUM(sale_item.quantity) AS items_count, `sale`.`total_amount`, `sale`.`status`
+FROM `sale`
+LEFT JOIN `sale_item` ON `sale`.`sale_id` = `sale_item`.`sale_id`
+LEFT JOIN `user` ON `sale`.`handled_by_user` = `user`.`username`
+LEFT JOIN `product` ON `product`.`product_id` = `sale_item`.`product_id`
+WHERE `product`.`product_name` LIKE '%194%' ESCAPE '!'
+OR  `user`.`username` LIKE '%194%' ESCAPE '!'
+OR  `sale`.`sale_id` LIKE '%194%' ESCAPE '!'
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 50
+DEBUG - 2026-09-24 09:19:50 --> [Sales:search] EXIT -> render Dashboard/sales | count=1
+DEBUG - 2026-09-24 09:19:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:19:51 --> [Sales:saleshomepage] ENTER | sales history page
+DEBUG - 2026-09-24 09:19:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:19:51 --> [Sales:saleshomepage] AUTH BLOCKED | redirect userlogin
+DEBUG - 2026-09-24 09:20:51 --> [Sales:search] ENTER | search=194
+DEBUG - 2026-09-24 09:20:51 --> SELECT `sale`.`sale_id`, `sale`.`sale_date`, `user`.`username` AS `username`, SUM(sale_item.quantity) AS items_count, `sale`.`total_amount`, `sale`.`status`
+FROM `sale`
+LEFT JOIN `sale_item` ON `sale`.`sale_id` = `sale_item`.`sale_id`
+LEFT JOIN `user` ON `sale`.`handled_by_user` = `user`.`username`
+LEFT JOIN `product` ON `product`.`product_id` = `sale_item`.`product_id`
+WHERE `product`.`product_name` LIKE '%194%' ESCAPE '!'
+OR  `user`.`username` LIKE '%194%' ESCAPE '!'
+OR  `sale`.`sale_id` LIKE '%194%' ESCAPE '!'
+GROUP BY `sale`.`sale_id`
+ORDER BY `sale`.`sale_date` DESC
+ LIMIT 50
+DEBUG - 2026-09-24 09:20:51 --> [Sales:search] EXIT -> render Dashboard/sales | count=1
+DEBUG - 2026-09-24 09:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:22:33 --> [DashBoard:index] ENTER | dashboard
+DEBUG - 2026-09-24 09:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:22:33 --> First sale row: []
+DEBUG - 2026-09-24 09:22:33 --> [DashBoard:index] EXIT -> render Dashboard/index | today_sales=164 open=18 products=88
+DEBUG - 2026-09-24 09:22:52 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 09:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:22:55 --> [NewSalesController:addToCart] ENTER | add item to cart
+DEBUG - 2026-09-24 09:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:22:55 --> [NewSalesController:addToCart] PRODUCT LOOKUP | product_id=43 found=yes
+DEBUG - 2026-09-24 09:22:55 --> [NewSalesController:addToCart] CART SAVED | items=1 total=12 added_qty=1
+DEBUG - 2026-09-24 09:22:55 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 09:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:22:59 --> [NewSalesController:updateQuantity] ENTER | adjust item quantity
+DEBUG - 2026-09-24 09:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:22:59 --> [NewSalesController:updateQuantity] CART UPDATED | items=1 total=24
+DEBUG - 2026-09-24 09:22:59 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 09:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:23:00 --> [NewSalesController:updateQuantity] ENTER | adjust item quantity
+DEBUG - 2026-09-24 09:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:23:00 --> [NewSalesController:updateQuantity] CART UPDATED | items=1 total=36
+DEBUG - 2026-09-24 09:23:01 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 09:23:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:23:02 --> [NewSalesController:updateQuantity] ENTER | adjust item quantity
+DEBUG - 2026-09-24 09:23:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:23:02 --> [NewSalesController:updateQuantity] CART UPDATED | items=1 total=48
+DEBUG - 2026-09-24 09:23:02 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 09:23:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:23:03 --> [NewSalesController:updateQuantity] ENTER | adjust item quantity
+DEBUG - 2026-09-24 09:23:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:23:03 --> [NewSalesController:updateQuantity] CART UPDATED | items=1 total=60
+DEBUG - 2026-09-24 09:23:04 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 09:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:23:06 --> [NewSalesController:checkout] ENTER | start sale checkout
+DEBUG - 2026-09-24 09:23:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:23:06 --> [NewSalesController:checkout] SALE INSERTED | sale_id=195 total=60
+DEBUG - 2026-09-24 09:23:06 --> session username value:'jackbanda'
+DEBUG - 2026-09-24 09:23:06 --> Checkout committed: sale_id=195, user_id=jackbanda, item_count=1
+DEBUG - 2026-09-24 09:23:06 --> [NewSalesController:checkout] LOCK SET | sale_id=195 -> awaiting payment confirm
+DEBUG - 2026-09-24 09:23:06 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 09:23:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:23:15 --> [NewSalesController:processPayment] ENTER | payment processing begins
+DEBUG - 2026-09-24 09:23:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:23:15 --> Payment session check: sale_id=195, status=PENDING, total=60
+DEBUG - 2026-09-24 09:23:15 --> [NewSalesController:processPayment] DISPATCH | transaction_id=83 status=SUCCESS
+DEBUG - 2026-09-24 09:23:15 --> [NewSalesController:completePayment] ENTER | payment success
+DEBUG - 2026-09-24 09:23:15 --> [NewSalesController:completePayment] TRANSACTION VALID | sale_id=195 txn=83 method=mobileMoney status=SUCCESS
+DEBUG - 2026-09-24 09:23:15 --> Fetched payment_status: 'SUCCESS'
+DEBUG - 2026-09-24 09:23:15 --> [NewSalesController:completePayment] PAYMENT RECORDED + SALE MARKED PAID | sale_id=195 method=mobileMoney status=SUCCESS
+DEBUG - 2026-09-24 09:23:15 --> [NewSalesController:completePayment] STOCK DECREMENTED | product=43 qty=5
+DEBUG - 2026-09-24 09:23:15 --> [NewSalesController:completePayment] EXIT -> receipt | sale_id=195 session cleared
+DEBUG - 2026-09-24 09:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:23:16 --> [NewSalesController:showReceipt] ENTER | sale_id=195
+DEBUG - 2026-09-24 09:23:16 --> [NewSalesController:showReceipt] EXIT -> render receipt | sale_id=195 total=60
+DEBUG - 2026-09-24 09:23:22 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 09:23:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:24:37 --> [DashBoard:index] ENTER | dashboard
+DEBUG - 2026-09-24 09:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:24:37 --> First sale row: []
+DEBUG - 2026-09-24 09:24:38 --> [DashBoard:index] EXIT -> render Dashboard/index | today_sales=224 open=18 products=88
+DEBUG - 2026-09-24 09:24:39 --> [DashBoard:index] ENTER | dashboard
+DEBUG - 2026-09-24 09:24:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:24:39 --> First sale row: []
+DEBUG - 2026-09-24 09:24:40 --> [DashBoard:index] EXIT -> render Dashboard/index | today_sales=224 open=18 products=88
+DEBUG - 2026-09-24 09:25:56 --> [Receipt:index] ENTER | receipts list page
+DEBUG - 2026-09-24 09:25:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:25:57 --> [Receipt:index] EXIT -> render Dashboard/receipt | count=50
+DEBUG - 2026-09-24 09:26:00 --> [ProductController:showProducts] ENTER | products page
+DEBUG - 2026-09-24 09:26:00 --> [ProductController:showProducts] EXIT -> render Products | count=50
+DEBUG - 2026-09-24 09:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:36:30 --> [Sales:saleshomepage] ENTER | sales history page
+DEBUG - 2026-09-24 09:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:36:30 --> [Sales:saleshomepage] EXIT -> render Dashboard/sales | count=50
+DEBUG - 2026-09-24 09:36:37 --> [NewSalesController:showNewSale] ENTER | new sale page
+DEBUG - 2026-09-24 09:36:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:36:42 --> [DashBoard:index] ENTER | dashboard
+DEBUG - 2026-09-24 09:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-24 09:36:42 --> First sale row: []
+DEBUG - 2026-09-24 09:36:42 --> [DashBoard:index] EXIT -> render Dashboard/index | today_sales=224 open=18 products=88

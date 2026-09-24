@@ -1,0 +1,201 @@
+CRITICAL - 2026-06-28 12:39:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "studentregisterform.php"
+[Method: GET, Route: studentlogin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('studentregisterform.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('studentregisterform', [], true)
+ 3 APPPATH\Controllers\studentregister.php(48): view('studentregisterform')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\studentregister->loginform()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\studentregister))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-28 13:05:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "studentregisterform.php"
+[Method: GET, Route: studentlogin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('studentregisterform.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('studentregisterform', [], true)
+ 3 APPPATH\Controllers\studentregister.php(48): view('studentregisterform')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\studentregister->loginform()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\studentregister))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-28 13:10:51 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "studentregister.php"
+[Method: GET, Route: studentregister]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('studentregister.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('studentregister', [], true)
+ 3 APPPATH\Controllers\studentregister.php(9): view('studentregister')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\studentregister->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\studentregister))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-28 13:27:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "studentregister.php"
+[Method: GET, Route: studentregister]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('studentregister.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('studentregister', [], true)
+ 3 APPPATH\Controllers\studentregister.php(9): view('studentregister')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Studentregister->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Studentregister))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-28 13:27:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "studentlogin.php"
+[Method: GET, Route: studentlogin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('studentlogin.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('studentlogin', [], true)
+ 3 APPPATH\Controllers\studentregister.php(48): view('studentlogin')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Studentregister->loginform()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Studentregister))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-28 13:37:57 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Studentregister.php"
+[Method: POST, Route: studentregister]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Studentregister.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('Studentregister', [], true)
+ 3 APPPATH\Controllers\studentregister.php(23): view('Studentregister', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Studentregister->register()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Studentregister))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-28 13:41:39 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Studentregister.php"
+[Method: POST, Route: studentregister]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Studentregister.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('Studentregister', [], true)
+ 3 APPPATH\Controllers\studentregister.php(23): view('Studentregister', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Studentregister->register()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Studentregister))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-28 13:42:30 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Studentregister.php"
+[Method: POST, Route: studentregister]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Studentregister.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('Studentregister', [], true)
+ 3 APPPATH\Controllers\studentregister.php(23): view('Studentregister', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Studentregister->register()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Studentregister))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-28 14:09:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "studentregister.php"
+[Method: GET, Route: studentregister]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('studentregister.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('studentregister', [], true)
+ 3 APPPATH\Controllers\studentregister.php(9): view('studentregister')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Studentregister->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Studentregister))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-28 14:09:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "studentregister.php"
+[Method: GET, Route: studentregister]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('studentregister.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('studentregister', [], true)
+ 3 APPPATH\Controllers\studentregister.php(9): view('studentregister')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Studentregister->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Studentregister))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-28 14:10:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "studentregister.php"
+[Method: GET, Route: studentregister]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('studentregister.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('studentregister', [], true)
+ 3 APPPATH\Controllers\studentregister.php(9): view('studentregister')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Studentregister->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Studentregister))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-28 14:10:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "studentregister.php"
+[Method: GET, Route: studentregister]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('studentregister.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('studentregister', [], true)
+ 3 APPPATH\Controllers\studentregister.php(9): view('studentregister')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Studentregister->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Studentregister))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-28 14:13:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "studentregister.php"
+[Method: GET, Route: studentregister]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('studentregister.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('studentregister', [], true)
+ 3 APPPATH\Controllers\studentregister.php(9): view('studentregister')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Studentregister->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Studentregister))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2026-06-28 14:13:56 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "studentregister.php"
+[Method: GET, Route: studentregister]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('studentregister.php')
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('studentregister', [], true)
+ 3 APPPATH\Controllers\studentregister.php(9): view('studentregister')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Studentregister->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Studentregister))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')
+DEBUG - 2026-06-28 14:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-28 14:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-28 14:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-28 14:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-06-28 18:29:14 --> ErrorException: Undefined variable $allusers
+[Method: GET, Route: homepage]
+in APPPATH\Views\homepage.php on line 5.
+ 1 APPPATH\Views\homepage.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $allusers', 'C:\\laragon\\www\\codeigniter4\\app\\Views\\homepage.php', 5)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\laragon\\www\\codeigniter4\\app\\Views\\homepage.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('homepage', [], true)
+ 5 APPPATH\Controllers\studentregister.php(80): view('homepage')
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Studentregister->homepage()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Studentregister))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\codeigniter4\\public\\index.php')

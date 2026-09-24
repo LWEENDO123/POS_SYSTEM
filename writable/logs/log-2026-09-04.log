@@ -1,0 +1,223 @@
+DEBUG - 2026-09-04 13:51:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 13:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-09-04 13:52:35 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos_system', 3306, '', 0)
+#1 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\POS_SYSTEM\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\POS_SYSTEM\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\POS_SYSTEM\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\POS_SYSTEM\app\Controllers\AuthController.php(33): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(974): App\Controllers\AuthController->userlogin()
+#8 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\POS_SYSTEM\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\POS_SYSTEM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\POS_SYSTEM\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\POS_SYSTEM\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\laragon\www\POS_SYSTEM\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\POS_SYSTEM\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\POS_SYSTEM\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\POS_SYSTEM\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\POS_SYSTEM\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\POS_SYSTEM\app\Controllers\AuthController.php(33): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(974): App\Controllers\AuthController->userlogin()
+#7 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\laragon\www\POS_SYSTEM\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\POS_SYSTEM\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\POS_SYSTEM\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\POS_SYSTEM\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\POS_SYSTEM\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2026-09-04 13:52:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: userlogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(33): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->userlogin()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-09-04 13:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 13:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 13:54:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-09-04 13:54:53 --> Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'pos_system.product.product_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+GROUP BY `product`.`product_name`
+ORDER BY `product`.`product_name` ASC
+ LIMIT 50', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+GROUP BY `product`.`product_name`
+ORDER BY `product`.`product_name` ASC
+ LIMIT 50')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+GROUP BY `product`.`product_name`
+ORDER BY `product`.`product_name` ASC
+ LIMIT 50')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+GROUP BY `product`.`product_name`
+ORDER BY `product`.`product_name` ASC
+ LIMIT 50', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ProductModel.php(94): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Newsales.php(59): App\Models\ProductModel->getProductsWithCategory(50)
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->Newsale()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-09-04 13:54:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'pos_system.product.product_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[Method: GET, Route: newsales]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+GROUP BY `product`.`product_name`
+ORDER BY `product`.`product_name` ASC
+ LIMIT 50', [], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\ProductModel.php(94): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Newsales.php(59): App\Models\ProductModel->getProductsWithCategory(50)
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->Newsale()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-09-04 13:54:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'pos_system.product.product_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+GROUP BY `product`.`product_name`
+ORDER BY `product`.`product_name` ASC
+ LIMIT 50')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+GROUP BY `product`.`product_name`
+ORDER BY `product`.`product_name` ASC
+ LIMIT 50')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+GROUP BY `product`.`product_name`
+ORDER BY `product`.`product_name` ASC
+ LIMIT 50', [], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\ProductModel.php(94): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Newsales.php(59): App\Models\ProductModel->getProductsWithCategory(50)
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->Newsale()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-09-04 13:54:53 --> [Caused by] mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'pos_system.product.product_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+GROUP BY `product`.`product_name`
+ORDER BY `product`.`product_name` ASC
+ LIMIT 50', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+GROUP BY `product`.`product_name`
+ORDER BY `product`.`product_name` ASC
+ LIMIT 50')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+GROUP BY `product`.`product_name`
+ORDER BY `product`.`product_name` ASC
+ LIMIT 50')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `product`.`product_id`, `product`.`product_name`, `product`.`price`, `product`.`stock_quantity`, `product`.`category_id`, `category`.`category_name`
+FROM `product`
+JOIN `category` ON `category`.`category_id` = `product`.`category_id`
+GROUP BY `product`.`product_name`
+ORDER BY `product`.`product_name` ASC
+ LIMIT 50', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ProductModel.php(94): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Newsales.php(59): App\Models\ProductModel->getProductsWithCategory(50)
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Newsales->Newsale()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Newsales))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-09-04 14:00:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:01:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:03:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:05:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:05:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:05:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:05:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:06:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:07:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:07:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:08:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:09:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:09:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:10:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:10:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-09-04 14:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

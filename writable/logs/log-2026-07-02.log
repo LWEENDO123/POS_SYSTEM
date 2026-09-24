@@ -1,0 +1,242 @@
+DEBUG - 2026-07-02 13:05:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 13:24:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 13:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 13:27:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 14:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-02 14:00:42 --> Table 'inventory_db.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'mercy mwanko\', \'namayala9\', \'mercy mwanko_namayala9\', \'$2y$10$8Zoz3H8QY8VhKGmTleQFJeZkNFfOAT/z1mvmuOlfZIKgrO44x0w2i\', \'KK108912@students.cavendish.co.zm\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'mercy mwanko\', \'namayala9\', \'mercy mwanko_namayala9\', \'$2y$10$8Zoz3H8QY8VhKGmTleQFJeZkNFfOAT/z1mvmuOlfZIKgrO44x0w2i\', \'KK108912@students.cavendish.co.zm\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'mercy mwanko\', \'namayala9\', \'mercy mwanko_namayala9\', \'$2y$10$8Zoz3H8QY8VhKGmTleQFJeZkNFfOAT/z1mvmuOlfZIKgrO44x0w2i\', \'KK108912@students.cavendish.co.zm\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (:firstname:, :lastname:, :username:, :password:, :email:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\CreateAccount.php(41): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CreateAccount->user_registration()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CreateAccount))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-02 14:00:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'inventory_db.user' doesn't exist
+[Method: POST, Route: create-account]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (:firstname:, :lastname:, :username:, :password:, :email:)', [...], false)
+ 2 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CreateAccount.php(41): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CreateAccount->user_registration()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CreateAccount))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-02 14:00:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'inventory_db.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'mercy mwanko\', \'namayala9\', \'mercy mwanko_namayala9\', \'$2y$10$8Zoz3H8QY8VhKGmTleQFJeZkNFfOAT/z1mvmuOlfZIKgrO44x0w2i\', \'KK108912@students.cavendish.co.zm\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'mercy mwanko\', \'namayala9\', \'mercy mwanko_namayala9\', \'$2y$10$8Zoz3H8QY8VhKGmTleQFJeZkNFfOAT/z1mvmuOlfZIKgrO44x0w2i\', \'KK108912@students.cavendish.co.zm\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (:firstname:, :lastname:, :username:, :password:, :email:)', [...], false)
+ 4 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\CreateAccount.php(41): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CreateAccount->user_registration()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CreateAccount))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-02 14:00:42 --> [Caused by] mysqli_sql_exception: Table 'inventory_db.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'mercy mwanko\', \'namayala9\', \'mercy mwanko_namayala9\', \'$2y$10$8Zoz3H8QY8VhKGmTleQFJeZkNFfOAT/z1mvmuOlfZIKgrO44x0w2i\', \'KK108912@students.cavendish.co.zm\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'mercy mwanko\', \'namayala9\', \'mercy mwanko_namayala9\', \'$2y$10$8Zoz3H8QY8VhKGmTleQFJeZkNFfOAT/z1mvmuOlfZIKgrO44x0w2i\', \'KK108912@students.cavendish.co.zm\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'mercy mwanko\', \'namayala9\', \'mercy mwanko_namayala9\', \'$2y$10$8Zoz3H8QY8VhKGmTleQFJeZkNFfOAT/z1mvmuOlfZIKgrO44x0w2i\', \'KK108912@students.cavendish.co.zm\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (:firstname:, :lastname:, :username:, :password:, :email:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\CreateAccount.php(41): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CreateAccount->user_registration()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CreateAccount))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-02 14:01:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-02 14:02:01 --> Table 'inventory_db.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'mercy mwanko\', \'namayala9\', \'mercy mwanko_namayala9\', \'$2y$10$UkFcvCJiYRnEy4bgGBuS0ezzU4FDG4T2Kir7JAtboZ1fziNHr.Fm2\', \'KK108912@students.cavendish.co.zm\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'mercy mwanko\', \'namayala9\', \'mercy mwanko_namayala9\', \'$2y$10$UkFcvCJiYRnEy4bgGBuS0ezzU4FDG4T2Kir7JAtboZ1fziNHr.Fm2\', \'KK108912@students.cavendish.co.zm\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'mercy mwanko\', \'namayala9\', \'mercy mwanko_namayala9\', \'$2y$10$UkFcvCJiYRnEy4bgGBuS0ezzU4FDG4T2Kir7JAtboZ1fziNHr.Fm2\', \'KK108912@students.cavendish.co.zm\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (:firstname:, :lastname:, :username:, :password:, :email:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\CreateAccount.php(41): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CreateAccount->user_registration()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CreateAccount))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-02 14:02:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'inventory_db.user' doesn't exist
+[Method: POST, Route: create-account]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (:firstname:, :lastname:, :username:, :password:, :email:)', [...], false)
+ 2 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CreateAccount.php(41): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CreateAccount->user_registration()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CreateAccount))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-02 14:02:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'inventory_db.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'mercy mwanko\', \'namayala9\', \'mercy mwanko_namayala9\', \'$2y$10$UkFcvCJiYRnEy4bgGBuS0ezzU4FDG4T2Kir7JAtboZ1fziNHr.Fm2\', \'KK108912@students.cavendish.co.zm\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'mercy mwanko\', \'namayala9\', \'mercy mwanko_namayala9\', \'$2y$10$UkFcvCJiYRnEy4bgGBuS0ezzU4FDG4T2Kir7JAtboZ1fziNHr.Fm2\', \'KK108912@students.cavendish.co.zm\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (:firstname:, :lastname:, :username:, :password:, :email:)', [...], false)
+ 4 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\CreateAccount.php(41): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CreateAccount->user_registration()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CreateAccount))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-02 14:02:01 --> [Caused by] mysqli_sql_exception: Table 'inventory_db.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'mercy mwanko\', \'namayala9\', \'mercy mwanko_namayala9\', \'$2y$10$UkFcvCJiYRnEy4bgGBuS0ezzU4FDG4T2Kir7JAtboZ1fziNHr.Fm2\', \'KK108912@students.cavendish.co.zm\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'mercy mwanko\', \'namayala9\', \'mercy mwanko_namayala9\', \'$2y$10$UkFcvCJiYRnEy4bgGBuS0ezzU4FDG4T2Kir7JAtboZ1fziNHr.Fm2\', \'KK108912@students.cavendish.co.zm\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'mercy mwanko\', \'namayala9\', \'mercy mwanko_namayala9\', \'$2y$10$UkFcvCJiYRnEy4bgGBuS0ezzU4FDG4T2Kir7JAtboZ1fziNHr.Fm2\', \'KK108912@students.cavendish.co.zm\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (:firstname:, :lastname:, :username:, :password:, :email:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\CreateAccount.php(41): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CreateAccount->user_registration()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CreateAccount))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-02 14:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 14:06:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 14:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 14:12:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-02 14:12:39 --> Duplicate entry '0' for key 'user.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'jack\', \'banda\', \'jack_banda\', \'$2y$10$mVOABlCO/lgho7oHP3hnJOL35kxiupyLoIzW5hS0YVwlVmkPyGiWe\', \'KK108912@students.cavendish.co.zm\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'jack\', \'banda\', \'jack_banda\', \'$2y$10$mVOABlCO/lgho7oHP3hnJOL35kxiupyLoIzW5hS0YVwlVmkPyGiWe\', \'KK108912@students.cavendish.co.zm\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'jack\', \'banda\', \'jack_banda\', \'$2y$10$mVOABlCO/lgho7oHP3hnJOL35kxiupyLoIzW5hS0YVwlVmkPyGiWe\', \'KK108912@students.cavendish.co.zm\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (:firstname:, :lastname:, :username:, :password:, :email:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\CreateAccount.php(41): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CreateAccount->user_registration()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CreateAccount))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-02 14:12:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'user.PRIMARY'
+[Method: POST, Route: create-account]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (:firstname:, :lastname:, :username:, :password:, :email:)', [...], false)
+ 2 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CreateAccount.php(41): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CreateAccount->user_registration()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CreateAccount))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-02 14:12:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'user.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'jack\', \'banda\', \'jack_banda\', \'$2y$10$mVOABlCO/lgho7oHP3hnJOL35kxiupyLoIzW5hS0YVwlVmkPyGiWe\', \'KK108912@students.cavendish.co.zm\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'jack\', \'banda\', \'jack_banda\', \'$2y$10$mVOABlCO/lgho7oHP3hnJOL35kxiupyLoIzW5hS0YVwlVmkPyGiWe\', \'KK108912@students.cavendish.co.zm\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (:firstname:, :lastname:, :username:, :password:, :email:)', [...], false)
+ 4 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\CreateAccount.php(41): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CreateAccount->user_registration()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CreateAccount))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+CRITICAL - 2026-07-02 14:12:39 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'user.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'jack\', \'banda\', \'jack_banda\', \'$2y$10$mVOABlCO/lgho7oHP3hnJOL35kxiupyLoIzW5hS0YVwlVmkPyGiWe\', \'KK108912@students.cavendish.co.zm\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'jack\', \'banda\', \'jack_banda\', \'$2y$10$mVOABlCO/lgho7oHP3hnJOL35kxiupyLoIzW5hS0YVwlVmkPyGiWe\', \'KK108912@students.cavendish.co.zm\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (\'jack\', \'banda\', \'jack_banda\', \'$2y$10$mVOABlCO/lgho7oHP3hnJOL35kxiupyLoIzW5hS0YVwlVmkPyGiWe\', \'KK108912@students.cavendish.co.zm\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`, `email`) VALUES (:firstname:, :lastname:, :username:, :password:, :email:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\CreateAccount.php(41): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CreateAccount->user_registration()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CreateAccount))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\POS_SYSTEM\\public\\index.php')
+DEBUG - 2026-07-02 14:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 14:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 14:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:02:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:02:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:05:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:05:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:06:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:10:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:16:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:26:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 15:26:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:27:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:28:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:30:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:31:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
